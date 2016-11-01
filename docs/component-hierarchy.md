@@ -1,14 +1,27 @@
 ## Component Hierarchy
 
-**AuthFormContainer**
- - AuthForm
+**HomepageContainer**
+ - Header
 
-**HeaderContainer**
- - Container for global header
+**MyDashboardContainer**
+ - Header
+ - CurrentUserDisplay
+ - MyTravelPlan
+ - UpComingGuest
 
-**TagContainer**
- - NotebookHeader
-  + NoteIndex
+**FormContainer**
 
-**Header**
- - Global Header
+**ReviewContainer**
+
+**SearchContainer**
+ - Header
+ - SearchOptions
+ - ListingsIndex
+ - GoogleMaps
+
+**ProfileContainer**
+ - Header
+ - GeneralInfo
+ - About
+ - House
+ - UserReviews
