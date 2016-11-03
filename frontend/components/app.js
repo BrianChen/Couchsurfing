@@ -4,7 +4,7 @@ import HeaderContainer from './header_container';
 
 const App = () => (
   <div>
-    <HeaderContainer/>
+    <HeaderContainer />
   </div>
 );
 

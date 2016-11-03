@@ -3,18 +3,18 @@ import React from 'react';
 class LoginForm extends React.Component {
 
   constructor(props) {
-    console.log(props);
     super(props);
     this.state ={
       email: "",
       password: ""
     }
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.login(this.state)
+
   }
 
   update(property) {

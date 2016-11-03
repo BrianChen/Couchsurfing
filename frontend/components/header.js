@@ -9,6 +9,7 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+
       modalOpen: false,
       signup: null
     };
@@ -26,23 +27,39 @@ class Header extends React.Component {
     this.setState({modalOpen: false})
   }
 
+  setNavButtons() {
+    let navButton;
+    if (this.props.currentUser) {
+      navButton = (
+        <button id="log-out-button" className="nav-button">Log Out</button>
+      )
+    } else {
+      navButton = (
+        <ul className="header-nav-button">
+          <li><button id="join-button" className="nav-button" onClick={this.__handleClick.bind(this, true)}>Join</button></li>
+          <li><button id="log-in-button" className="nav-button" onClick={this.__handleClick.bind(this, false)}>Log In</button></li>
+        </ul>
+      )
+    }
+    return navButton;
+  }
+
   render(){
     let component = (this.state.signup) ? <SignUpFormContainer/> : <LoginFormContainer/>;
-
+    let loggedIn = (this.props.currentUser) ? true : false
+    let navButton;
     return (
-      <div>
-        <h1>Floorsurfing</h1>
-        <button className="log-in-button" onClick={this.__handleClick.bind(this, false)}>Log In</button>
-        <button className="sign-up-button" onClick={this.__handleClick.bind(this, true)}>Sign Up</button>
-
-        <Modal
-          isOpen={this.state.modalOpen}
-          onRequestClose={this.onModalClose}
-          style={ModalStyle}
-        >
-          {component}
-          <button onClick={this.onModalClose}>Close</button>
-        </Modal>
+      <div className = "header-container">
+        <h3 className = "floorsurfing-logo">Floorsurfing</h3>
+          <Modal
+            isOpen={this.state.modalOpen}
+            onRequestClose={this.onModalClose}
+            style={ModalStyle}
+            >
+            {component}
+            <button onClick={this.onModalClose}>Close</button>
+          </Modal>
+          {this.setNavButtons()}
       </div>
     )
   }

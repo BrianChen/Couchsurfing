@@ -1,0 +1,36 @@
+.header-container {
+  border-bottom: solid rgb(217, 217, 216);
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+
+}
+
+.floorsurfing-logo {
+  margin-left: 20px;
+
+}
+
+.nav-button {
+  height: inherit;
+  background-color: #287fb8;
+  padding: 8px 12px;
+}
+
+//ul
+.header-nav-button{
+  display: flex;
+  line-height: 60px;
+  justify-content: space-between;
+  margin-right: 20px;
+  align-items: center;
+}
+
+//li
+.header-nav-button > li {
+  box-sizing: border-box;
+  font-size: 15px;
+  padding: 8px 12px;
+}

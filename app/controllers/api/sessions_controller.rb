@@ -5,7 +5,6 @@ class Api::SessionsController < ApplicationController
       params[:user][:email],
       params[:user][:password]
     )
-    debugger
     if @user
       sign_in(@user)
       render 'api/users/show'
@@ -23,6 +22,4 @@ class Api::SessionsController < ApplicationController
       render(json: ["Nobody signed in"], status: 404)
     end
   end
-
-
 end

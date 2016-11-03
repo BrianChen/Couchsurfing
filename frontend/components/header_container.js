@@ -1,13 +1,14 @@
-import {connect} from 'react-redux';
-import {logout} from '../actions/session_actions';
+import { connect } from 'react-redux';
+import { logout } from '../actions/session_actions';
 import Header from './header';
 
-const mapStateToProps = ({session}) => ({
-  currentUser: session.currentUser
+const mapStateToProps = ({ session }) => ({
+  currentUser: session.currentUser,
 });
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout())
+  logout: () => dispatch(logout()),
+  login: () => dispatch(login({email: "example@gmail.com", password: "password1" }))
 });
 
 export default connect(
