@@ -8,7 +8,6 @@ password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
 birthdate       | date      | not null
 gender          | string    | not null, limit 1
-about_me        | string    |
 interest        | string    |
 
 ## listings
