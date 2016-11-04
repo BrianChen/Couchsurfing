@@ -1,4 +1,6 @@
 import React from 'react';
+import {hashHistory, withRouter} from 'react-router';
+
 
 class LoginForm extends React.Component {
 
@@ -13,8 +15,14 @@ class LoginForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login(this.state)
+    this.props.login(this.state);
+  }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.currentUser ) {
+      this.props.closeModal();
+      this.props.router.push('/dashboard');
+    }
   }
 
   update(property) {
@@ -38,4 +46,4 @@ class LoginForm extends React.Component {
   }
 };
 
-export default LoginForm;
+export default withRouter(LoginForm);

@@ -12,7 +12,7 @@ const sessionReducer = (oldState = {}, action) => {
         errors: action.errors
       });
     case LOGOUT:
-      return (merge({}, defaultState));
+      return {};
     default:
       return oldState;
   }

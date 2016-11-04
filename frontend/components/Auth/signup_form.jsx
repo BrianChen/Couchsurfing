@@ -1,4 +1,5 @@
 import React from 'react';
+import { hashHistory, withRouter} from 'react-router';
 
 class SignupForm extends React.Component {
 
@@ -14,7 +15,14 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.signup(this.state)
+    this.props.signup(this.state);
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (newProps.currentUser) {
+      this.props.closeModal();
+      this.props.router.push('/dashboard')
+    }
   }
 
   update(property) {
@@ -32,11 +40,11 @@ class SignupForm extends React.Component {
             placeholder="Email"/><br/>
           <input type="password" onChange={this.update('password')} value={this.state.password}
             placeholder="Password"/><br/>
-          <button>Submit</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     );
   }
 };
 
-export default SignupForm;
+export default withRouter(SignupForm);
