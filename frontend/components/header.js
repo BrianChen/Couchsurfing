@@ -16,9 +16,10 @@ class Header extends React.Component {
     this.onModalClose = this.onModalClose.bind(this);
     this.handleLogOut = this.handleLogOut.bind(this);
     this.handleGuestLogin = this.handleGuestLogin.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  __handleClick(bool) {
+  handleClick(bool) {
     this.setState({
       modalOpen: true,
       signup: bool
@@ -38,11 +39,11 @@ class Header extends React.Component {
     this.props.guestLogin();
   }
 
-  // componentWillReceiveProps(newProps) {
-  //   if (newProps.currentUser) {
-  //     this.props.router.push('/dashboard');
-  //   }
-  // }
+  componentWillReceiveProps(newProps) {
+    if (!this.props.currentUser && newProps.currentUser ) {
+      this.props.router.push('/dashboard');
+    }
+  }
 
   setNavButtons() {
     let navButton;
@@ -53,9 +54,9 @@ class Header extends React.Component {
     } else {
       navButton = (
         <ul className="header-nav-button">
-          <li><button id="join-button" className="nav-button" onClick={this.__handleClick.bind(this, true)}>Join</button></li>
-          <li><button id="log-in-button" className="nav-button" onClick={this.__handleClick.bind(this, false)}>Log In</button></li>
-          <li><button id="guest-login-button" className="nav-button" onClick={this.handleGuestLogin}>Guest LogIn</button></li>
+          <li><button id="join-button" className="nav-button" onClick={this.handleClick.bind(this, true)}>Join</button></li>
+          <li><button id="white-button" className="nav-button" onClick={this.handleClick.bind(this, false)}>Log In</button></li>
+          <li><button id="white-button" className="nav-button" onClick={this.handleGuestLogin}>Guest LogIn</button></li>
         </ul>
       )
     }
@@ -63,21 +64,18 @@ class Header extends React.Component {
   }
 
   render(){
-    let component = (this.state.signup) ? <SignUpFormContainer closeModal={this.onModalClose}/> : <LoginFormContainer closeModal={this.onModalClose}/>;
-    let loggedIn = (this.props.currentUser) ? true : false
-    let navButton;
+    let component = (this.state.signup) ? <SignUpFormContainer closeModal={this.onModalClose} handleClick={this.handleClick}/> : <LoginFormContainer closeModal={this.onModalClose} handleClick={this.handleClick}/>;
     return (
       <div className = "header-container">
         <a href="/dashboard" title="Floorsurfing">Floorsurfing</a>
-          <Modal
-            isOpen={this.state.modalOpen}
-            onRequestClose={this.onModalClose}
-            style={ModalStyle}
-            >
-            {component}
-            <button onClick={this.onModalClose}>Close</button>
-          </Modal>
-          {this.setNavButtons()}
+        <Modal
+          isOpen={this.state.modalOpen}
+          onRequestClose={this.onModalClose}
+          style={ModalStyle}
+          >
+          {component}
+        </Modal>
+        {this.setNavButtons()}
       </div>
     )
   }

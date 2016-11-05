@@ -1,5 +1,7 @@
 import React from 'react';
 import HeaderContainer from './header_container';
+import UserBox from './user_box';
+import UserBoxContainer from './user_box_container';
 
 class Dashboard extends React.Component {
 
@@ -10,7 +12,7 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        dashboard
+        <UserBoxContainer />
       </div>
     )
   }

@@ -1,0 +1,32 @@
+.login-header {
+  background-color: $lightgrey;
+  text-align: center;
+}
+
+.login-header > h1 {
+  color: #929ead;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.login-content {
+  padding-top: 18px;
+}
+
+.login-content input {
+  margin-bottom: 7px;
+}
+
+.login-form {
+  width: 100%;
+}
+
+#login-submit-button {
+  width: 100%;
+  color: $white;
+  margin-bottom: 39px;
+}
+
+.login-footer {
+  text-align: center
+}

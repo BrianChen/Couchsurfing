@@ -32,16 +32,24 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div>
-        <h3>Sign Up</h3><br/>
-        <form className="sign-up-form" onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.update('name')} value={this.state.name}
-            placeholder="Name"/><br/>
-          <input type="text" onChange={this.update('email')} value={this.state.email}
-            placeholder="Email"/><br/>
-          <input type="password" onChange={this.update('password')} value={this.state.password}
-            placeholder="Password"/><br/>
-          <button type="submit">Submit</button>
-        </form>
+        <header className="sign-up-header">
+          <h1>Join Floorsurfing for free</h1>
+        </header>
+        <div className="sign-up-content">
+          <form className="sign-up-form" onSubmit={this.handleSubmit}>
+            <input type="text" onChange={this.update('name')} value={this.state.name}
+              placeholder="Name"/><br/>
+            <input type="text" onChange={this.update('email')} value={this.state.email}
+              placeholder="Email"/><br/>
+            <input type="password" onChange={this.update('password')} value={this.state.password}
+              placeholder="Password"/><br/>
+            <button id="sign-up-submit-button" type="submit">Join with Email</button>
+          </form>
+          <div className="sign-up-footer">
+            <p>Already a Member?</p>
+            <button id="white-button" onClick={this.props.handleClick.bind(null,false)}>Log In</button>
+          </div>
+        </div>
       </div>
     );
   }

@@ -5,14 +5,15 @@ const ModalStyle = {
     left            : 0,
     right           : 0,
     bottom          : 0,
-    backgroundColor : 'rgba(30, 36, 34, 0)'
+    zIndex          : 1000
+
   },
   content : {
     position        : 'fixed',
-    top             : '100px',
-    left            : '150px',
-    right           : '150px',
-    bottom          : '100px',
+    top             : '8%',
+    left            : '35%',
+    right           : '35%',
+    bottom          : '8%',
     border          : '1px solid #ccc',
     padding         : '20px',
   }

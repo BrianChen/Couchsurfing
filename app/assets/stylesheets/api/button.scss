@@ -1,0 +1,20 @@
+button {
+  height: 40px;
+  width: 100px;
+  border-radius: 4px;
+  padding: 2px;
+  text-align: center;
+  background-color: $blue;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid $grey;
+  padding: 12px 8px;
+}
+
+button:hover {
+  background-color: rgb(222, 222, 222)
+}

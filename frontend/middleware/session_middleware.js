@@ -1,10 +1,8 @@
 import {LOGIN, LOGOUT, SIGNUP, receiveErrors, receiveCurrentUser} from '../actions/session_actions';
 import {login, signup, logout} from '../util/session_api_util';
-import { hashHistory } from 'react-router';
 
 export default ({getState, dispatch}) => next => action => {
   const success = user => {
-    hashHistory.push('/dashboard');
     dispatch(receiveCurrentUser(user));
   };
   const error = xhr => dispatch(receiveErrors(xhr.responseJSON));

@@ -25,7 +25,8 @@ class Root extends React.Component {
         <Router history={hashHistory}>
           <Route path="/" component={App}>
             <IndexRoute component={SplashContainer}/>
-            <Route path="/dashboard" component={DashboardContainer} onEnter={this.ensureLogin}/>
+            <Route path="dashboard" component={DashboardContainer} onEnter={this.ensureLogin}/>
+
           </Route>
         </Router>
       </Provider>
