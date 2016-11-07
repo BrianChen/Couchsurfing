@@ -1,10 +1,10 @@
 class Api::UsersController < ApplicationController
-  #update/destroy/show will implement later on
 
   def create
     @user = User.new(user_params)
     if @user.save
       sign_in(@user)
+      @listing = Listing.create({user_id: @user.id})
       render :show
     else
       render json: @user.errors.full_messages, status: 404

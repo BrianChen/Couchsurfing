@@ -22,6 +22,7 @@ ul {
 
 body {
   font-family: Lato, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  background-color: #f1efea;
 }
 
 input[type="password"],
@@ -42,6 +43,10 @@ button {
 button,
 input[type="submit"] {
   cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* Clearfix */

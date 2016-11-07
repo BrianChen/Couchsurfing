@@ -10,23 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161104180023) do
+ActiveRecord::Schema.define(version: 20161106021100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookings", force: :cascade do |t|
+    t.integer  "guest_id",   null: false
+    t.integer  "listing_id", null: false
+    t.date     "start_date", null: false
+    t.date     "end_date",   null: false
+    t.integer  "guests",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "listings", force: :cascade do |t|
-    t.string   "address",                          null: false
-    t.string   "city",                             null: false
+    t.string   "address"
+    t.string   "city"
     t.float    "longitude"
     t.float    "latitude"
     t.string   "description"
-    t.integer  "host_id",                          null: false
+    t.integer  "user_id",                          null: false
     t.integer  "max_guests"
     t.boolean  "accepting_guests", default: false, null: false
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
-    t.index ["host_id"], name: "index_listings_on_host_id", unique: true, using: :btree
+    t.date     "end_date"
+    t.date     "start_date"
+    t.index ["end_date"], name: "index_listings_on_end_date", using: :btree
+    t.index ["latitude"], name: "index_listings_on_latitude", using: :btree
+    t.index ["longitude"], name: "index_listings_on_longitude", using: :btree
+    t.index ["start_date"], name: "index_listings_on_start_date", using: :btree
+    t.index ["user_id"], name: "index_listings_on_user_id", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade do |t|

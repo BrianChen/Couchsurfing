@@ -3,8 +3,19 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :password, length: {minimum: 6, allow_nil: true}
 
-  has_one :listings
-  # has_many :bookings
+  has_one :listing
+
+  #User's travels
+  has_many :travels,
+    primary_key: :id,
+    foreign_key: :guest_id,
+    class_name: :Booking
+
+  #User's upcoming guest
+  has_many :bookings,
+    through: :listing,
+    source: :bookings
+
   # has_many :reviews
 
   attr_reader :password

@@ -49,7 +49,11 @@ class Header extends React.Component {
     let navButton;
     if (this.props.currentUser) {
       navButton = (
-        <button id="log-out-button" className="nav-button" onClick={this.handleLogOut}>Log Out</button>
+        <ul className="header-nav-button">
+          <button id="my-dashboard-button" className="nav-button">My Dashboard</button>
+          <button id="my-profile-button" className="nav-button">My Profile</button>
+          <button id="log-out-button" className="nav-button" onClick={this.handleLogOut}>Log Out</button>
+        </ul>
       )
     } else {
       navButton = (
