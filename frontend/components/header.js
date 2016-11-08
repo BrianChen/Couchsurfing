@@ -17,6 +17,7 @@ class Header extends React.Component {
     this.handleLogOut = this.handleLogOut.bind(this);
     this.handleGuestLogin = this.handleGuestLogin.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.search = this.search.bind(this);
   }
 
   handleClick(bool) {
@@ -67,6 +68,22 @@ class Header extends React.Component {
     return navButton;
   }
 
+  search(e) {
+    e.preventDefault();
+  }
+
+  setSearchBar() {
+    let searchBar;
+    if (this.props.currentUser) {
+      searchBar = (
+        <form>
+          <input onSubmit={this.search} type="text" name="search" placeholder="Where are you going?"></input>
+        </form>
+      )
+    }
+    return searchBar;
+  }
+
   render(){
     let component = (this.state.signup) ? <SignUpFormContainer closeModal={this.onModalClose} handleClick={this.handleClick}/> : <LoginFormContainer closeModal={this.onModalClose} handleClick={this.handleClick}/>;
     return (
@@ -79,7 +96,9 @@ class Header extends React.Component {
           >
           {component}
         </Modal>
+        {this.setSearchBar()}
         {this.setNavButtons()}
+
       </div>
     )
   }

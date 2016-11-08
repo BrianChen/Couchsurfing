@@ -1,5 +1,8 @@
 .travel-plans {
-  
+  background-color: $white;
+  margin-bottom: 14px;
+  border-bottom: 2px solid $greyBorder;
+
 }
 
 .travel-plans-header {
@@ -13,5 +16,5 @@
 }
 
 .travel-plans-content {
-  background-color: $lightgrey;
+  background-color: $greyBackground;
 }

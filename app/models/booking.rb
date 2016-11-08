@@ -7,5 +7,10 @@ class Booking < ApplicationRecord
     through: :listing,
     source: :user
 
+  belongs_to :guest,
+    primary_key: :id,
+    foreign_key: :guest_id,
+    class_name: :User
+
 
 end
