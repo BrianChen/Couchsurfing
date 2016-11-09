@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script type="text/javascript">
+       <% if (signed_in?) %>
+           window.currentUser = <%= render("api/users/user.json.jbuilder",
+           user: current_user).html_safe %>
+       <% end %>
+   </script>
     <title>Couchsurfing</title>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyB3pLHPMXQ3Fr4BRMXgE7Px6hgGOv9k8p4" %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>

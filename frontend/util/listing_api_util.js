@@ -16,4 +16,23 @@ export const updateListing = (listing, success, error) => {
     success,
     error
   });
+};
+
+export const fetchListings = (filters, success, error) => {
+  $.ajax({
+    type: 'GET',
+    url: 'api/listings',
+    data: filters,
+    success
+  });
+};
+
+export const fetchListing = (listing, success, error) => {
+  $.ajax({
+    type: 'GET',
+    url: `api/listing/${listing.id}`,
+    data: {listing},
+    success,
+    error
+  })
 }

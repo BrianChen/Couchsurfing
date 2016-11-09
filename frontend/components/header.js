@@ -3,7 +3,8 @@ import Modal from 'react-modal';
 import SignUpFormContainer from './Auth/signup_form_container';
 import LoginFormContainer from './Auth/login_form_container';
 import ModalStyle from './Auth/modal_style';
-import { hashHistory, withRouter } from 'react-router';
+import { hashHistory, withRouter, Link } from 'react-router';
+import SearchBar from './search/search_bar';
 
 class Header extends React.Component {
 
@@ -17,7 +18,6 @@ class Header extends React.Component {
     this.handleLogOut = this.handleLogOut.bind(this);
     this.handleGuestLogin = this.handleGuestLogin.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.search = this.search.bind(this);
   }
 
   handleClick(bool) {
@@ -51,9 +51,9 @@ class Header extends React.Component {
     if (this.props.currentUser) {
       navButton = (
         <ul className="header-nav-button">
-          <button id="my-dashboard-button" className="nav-button">My Dashboard</button>
-          <button id="my-profile-button" className="nav-button">My Profile</button>
-          <button id="log-out-button" className="nav-button" onClick={this.handleLogOut}>Log Out</button>
+          <Link to="/dashboard" id="my-dashboard-button" className="nav-button" >My Dashboard</Link>
+          <Link to="/dashboard" id="my-profile-button" className="nav-button" >My Profile</Link>
+          <Link to="/" id="log-out-button" className="nav-button" onClick={this.handleLogOut}>Log Out</Link>
         </ul>
       )
     } else {
@@ -68,17 +68,11 @@ class Header extends React.Component {
     return navButton;
   }
 
-  search(e) {
-    e.preventDefault();
-  }
-
   setSearchBar() {
     let searchBar;
     if (this.props.currentUser) {
       searchBar = (
-        <form>
-          <input onSubmit={this.search} type="text" name="search" placeholder="Where are you going?"></input>
-        </form>
+        <SearchBar />
       )
     }
     return searchBar;
@@ -88,7 +82,7 @@ class Header extends React.Component {
     let component = (this.state.signup) ? <SignUpFormContainer closeModal={this.onModalClose} handleClick={this.handleClick}/> : <LoginFormContainer closeModal={this.onModalClose} handleClick={this.handleClick}/>;
     return (
       <div className = "header-container">
-        <a href="/dashboard" title="Floorsurfing">Floorsurfing</a>
+        <Link to="/dashboard" className="logo">Floorsurfing</Link>
         <Modal
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose}
@@ -98,7 +92,6 @@ class Header extends React.Component {
         </Modal>
         {this.setSearchBar()}
         {this.setNavButtons()}
-
       </div>
     )
   }

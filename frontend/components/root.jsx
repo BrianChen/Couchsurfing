@@ -5,6 +5,7 @@ import SplashContainer from './splash_container';
 import DashboardContainer from './dashboard/dashboard_container';
 import App from './app';
 import { retrieveBookings } from '../actions/booking_actions';
+import SearchContainer from './search/search_container';
 
 class Root extends React.Component {
 
@@ -33,8 +34,9 @@ class Root extends React.Component {
       <Provider store={store}>
         <Router history={hashHistory}>
           <Route path="/" component={App}>
-            <IndexRoute component={SplashContainer}/>
+            <IndexRoute component={SplashContainer} onEnter={this.ensureLogin}/>
             <Route path="dashboard" component={DashboardContainer} onEnter={this.getBookings}/>
+            <Route path="search" component={SearchContainer} />
 
           </Route>
         </Router>
