@@ -13,6 +13,7 @@ const Search = ({listings, updateFilter, startDate, endDate}) => {
       <div className="right-half">
         <ListingMap
           listings={listings}
+          showListing={false}
           updateFilter={updateFilter} />
       </div>
     </div>

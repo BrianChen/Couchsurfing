@@ -6,3 +6,13 @@ export const fetchBookings = (success, error) => {
     error
   });
 }
+
+export const createBooking = (booking, success, error) => {
+  $.ajax({
+    type: 'POST',
+    url: '/api/bookings',
+    data: {booking},
+    success,
+    error
+  })
+}

@@ -1,23 +1,43 @@
 import React from 'react';
 
-const handleChange = (filter, updateFilter) => (
-  e => updateFilter(filter, e.currentTarget.value)
-)
+class FilterForm extends React.Component {
 
-const FilterForm = ({ startDate, endDate, updateFilter }) => (
-  <div>
-    <span className="filter">Filter results:</span>
-    <label>Start Date</label>
-    <input
-      type="number"
-      value={startDate}
-      onChange={handleChange('startDate', updateFilter)}/>
-    <label>End Date</label>
-    <input
-      type="number"
-      value={endDate}
-      onChange={handleChange('endDate', updateFilter)}/>
-  </div>
-)
+  constructor(props) {
+    super(props);
+    this.state = {
+      start_date: this.props.start_date,
+      end_date: this.props.end_date
+    }
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateDates = this.updateDates.bind(this);
+  }
+
+  updateDates(property) {
+    return e => this.setState({[property]: e.target.value})
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.updateFilter('dates', this.state);
+  }
+
+  render() {
+    return (
+      <div className="filter-form">
+        <form id="filter-form">
+          <span>Dates</span>
+          <input className="start_date-input date-input"
+            type="date"
+            value={this.state.start_date || ""}
+            onChange={this.updateDates('start_date')}/>
+          <input className="end_date-input date-input"
+            type="date"
+            value={this.state.end_date || ""}
+            onChange={this.updateDates('end_date')}/>
+          <button onClick={this.handleSubmit}>Submit</button>
+        </form>
+      </div>
+    )};
+}
 
 export default FilterForm;

@@ -20,7 +20,7 @@ export const retrieveListings = () => ({
 });
 
 export const retrieveListing = id => ({
-  type: RETRIEVE_LISTINGS,
+  type: RETRIEVE_LISTING,
   id
 });
 
@@ -30,6 +30,6 @@ export const receiveListing = listing => ({
 })
 
 export const receiveListings = listings => ({
-  type: RECEIVE_LISTING,
+  type: RECEIVE_LISTINGS,
   listings
 })

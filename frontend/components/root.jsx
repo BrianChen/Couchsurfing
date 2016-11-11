@@ -6,6 +6,7 @@ import DashboardContainer from './dashboard/dashboard_container';
 import App from './app';
 import { retrieveBookings } from '../actions/booking_actions';
 import SearchContainer from './search/search_container';
+import ListingShowContainer from './search/listing_show_container';
 
 class Root extends React.Component {
 
@@ -13,11 +14,18 @@ class Root extends React.Component {
     super(props);
     this.getBookings = this.getBookings.bind(this);
     this.ensureLogin = this.ensureLogin.bind(this);
+    this.checkLogin = this.checkLogin.bind(this);
   }
 
   ensureLogin(nextState, replace) {
     if (this.props.store.getState().session.currentUser === {} || this.props.store.getState().session.currentUser === 'undefined') {
       replace('/');
+    }
+  }
+
+  checkLogin(nextState, replace) {
+    if (this.props.store.getState().session.currentUser) {
+      replace('dashboard');
     }
   }
 
@@ -34,10 +42,10 @@ class Root extends React.Component {
       <Provider store={store}>
         <Router history={hashHistory}>
           <Route path="/" component={App}>
-            <IndexRoute component={SplashContainer} onEnter={this.ensureLogin}/>
-            <Route path="dashboard" component={DashboardContainer} onEnter={this.getBookings}/>
-            <Route path="search" component={SearchContainer} />
-
+            <IndexRoute component={SplashContainer} onEnter={this.checkLogin}/>
+            <Route path="/dashboard" component={DashboardContainer} onEnter={this.getBookings}/>
+            <Route path="/search" component={SearchContainer} onEnter={this.ensureLogin} />
+            <Route path="/listings/:listingId" component={ListingShowContainer} onEnter={this.ensureLogin} />
           </Route>
         </Router>
       </Provider>

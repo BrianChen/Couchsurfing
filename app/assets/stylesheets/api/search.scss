@@ -1,4 +1,33 @@
-.map-container {
-  width: 500px;
+#map-container {
+  width: 100%;
   height: 500px;
+}
+
+.search-page {
+  display: flex;
+  margin-left: 25px;
+  padding-top: 10px;
+}
+
+.left-half {
+  width: 40%;
+  margin-left: 10px;
+  margin-right:10px;
+}
+
+.right-half {
+  width: 60%;
+}
+
+.filter-form {
+  border-bottom: 2px solid $greyBorder;
+  background-color: $white;
+}
+
+.date-input {
+  width: 100px;
+}
+
+#filter-form {
+  display: flex;
 }

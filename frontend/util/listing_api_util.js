@@ -1,13 +1,3 @@
-// export const createListing = (listing, success, error) => {
-//   $.ajax({
-//     url: '/api/listings',
-//     type: 'POST',
-//     data: {listing},
-//     success,
-//     error
-//   });
-// }
-
 export const updateListing = (listing, success, error) => {
   $.ajax({
     url: `/api/listings/${listing.id}`,
@@ -22,16 +12,15 @@ export const fetchListings = (filters, success, error) => {
   $.ajax({
     type: 'GET',
     url: 'api/listings',
-    data: filters,
+    data: {filters},
     success
   });
 };
 
-export const fetchListing = (listing, success, error) => {
+export const fetchListing = (id, success, error) => {
   $.ajax({
     type: 'GET',
-    url: `api/listing/${listing.id}`,
-    data: {listing},
+    url: `api/listings/${id}`,
     success,
     error
   })

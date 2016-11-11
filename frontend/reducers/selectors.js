@@ -1,3 +1,3 @@
-export const selectListing = ({ listing }, id) => listing[id] || {};
+export const selectListing = ({ listings }, id) => listings[id] || {};
 
 export const asArray = ({ listings }) => Object.keys(listings).map(key => listings[key]);

@@ -1,7 +1,7 @@
 import { RECEIVE_LISTINGS, RECEIVE_LISTING } from '../actions/listing_actions';
 import merge from 'lodash/merge';
 
-let defaultState = {listings: []}
+let defaultState = {}
 
 const ListingReducer = (state = defaultState, action) => {
   Object.freeze(state);

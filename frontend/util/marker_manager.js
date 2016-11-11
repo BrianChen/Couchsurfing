@@ -10,7 +10,7 @@ export default class MarkerManager {
   }
 
   updateMarkers(listings) {
-    this.listing = listings;
+    this.listings = listings;
     this._listingsToAdd().forEach(this._createMarkerFromListing);
     this._markersToRemove().forEach(this._removeMarker);
   }
@@ -25,12 +25,17 @@ export default class MarkerManager {
     return this.markers.filter( marker => !listingIds.includes(marker.listingId) );
   }
 
+
   _createMarkerFromListing(listing) {
-    const pos = new google.maps.LatLng(listing.lat, listing.lng);
+    let shape = {
+      coords: [1,1,1,20,18,20,1],
+      type: 'poly'
+    }
+    const pos = new google.maps.LatLng(listing.latitude, listing.longitude);
     const marker = new google.maps.Marker({
       position: pos,
       map: this.map,
-      listingId: listing.id
+      listingId: listing.id,
     });
     marker.addListener('click', () => this.handleClick(listing));
     this.markers.push(marker);

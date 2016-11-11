@@ -45,6 +45,18 @@
 
 }
 
+#my-dashboard-button {
+  background-color: $white;
+  color: $blue;
+  border-color: $blue;
+}
+
+#my-dashboard-button {
+  background-color: $white;
+  color: $blue;
+  border-color: $blue;
+}
+
 //ul
 .header-nav-button{
   display: flex;
@@ -58,4 +70,5 @@
   box-sizing: border-box;
   font-size: 15px;
   padding: 8px 12px;
+  vertical-align: middle;
 }
