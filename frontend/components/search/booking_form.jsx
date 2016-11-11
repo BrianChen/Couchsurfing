@@ -34,7 +34,6 @@ class BookingForm extends React.Component {
         </header>
         <div className="booking-content">
           <form className="booking-form" onSubmit={this.handleSubmit}>
-
             <input
               className="booking-start-date"
               type="date"
