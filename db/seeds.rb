@@ -34,6 +34,13 @@ User.create!([{
     birthdate: "03-10-1980",
     gender: "M",
     interest: "Skydiving, Snowboarding and Hiking"
+  },{
+    name: "Jake Alan",
+    email: "jake@gmail.com",
+    password: "password1",
+    birthdate: "03-10-1990",
+    gender: "M",
+    interest: "Interested in interesting stuff"
   }])
 
 Listing.create!([{

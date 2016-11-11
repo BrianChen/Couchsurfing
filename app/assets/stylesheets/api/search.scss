@@ -22,12 +22,40 @@
 .filter-form {
   border-bottom: 2px solid $greyBorder;
   background-color: $white;
+  margin: 20px;
 }
 
 .date-input {
-  width: 100px;
+  width: 200px;
+  text-align: center;
 }
 
-#filter-form {
-  display: flex;
+.inputs {
+  align-items: center;
+}
+
+.listing-index h1 {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 25px;
+  color: $orange;
+}
+
+.listings-list {
+  background-color: $white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 5px;
+  border-bottom: 2px solid $greyBorder;
+  &:hover{
+    cursor: pointer;
+    background-color: $grey;
+  }
+  &:after{
+    display: block;
+    content: "";
+    clear:both;
+  }
 }

@@ -16,10 +16,11 @@ class ListingIndexItem extends React.Component {
   render() {
     return (
       <div className="listing-index-item" onClick={this.handleClick}>
-        <h1>{this.props.listing.id}</h1>
-        <h1>{this.props.listing.address}</h1>
-        <h1>{this.props.listing.city}</h1>
-        <h1>{this.props.listing.description}</h1>
+        <ul className="listings-list">
+          <li>Address: {this.props.listing.address}</li>
+          <li>City: {this.props.listing.city}</li><br/>
+          <li>Description: {this.props.listing.description}</li>
+        </ul>
       </div>
     );
   }

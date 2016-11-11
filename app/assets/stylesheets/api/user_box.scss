@@ -5,16 +5,35 @@
 }
 
 .user-box-section {
+  margin-top: 25px;
+  border-radius: 5px;
   background-color: white;
   border-bottom: 2px solid $greyBorder;
   position: relative;
   width: 25%;
   padding: 25px;
-  margin-top: 8px;
   margin-left: 25px;
   margin-right: 25px;
   height: 128px;
 }
+
+.user-name {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+#review-button {
+  background-color: $orange;
+  padding: 5px;
+  border-radius: 5px;
+  color: $white;
+  float: right;
+  &:hover{
+    background-color: darken($orange, 20);
+  }
+}
+
+
 
 .user-box-header {
   padding: 20px;

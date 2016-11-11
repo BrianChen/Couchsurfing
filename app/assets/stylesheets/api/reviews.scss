@@ -1,0 +1,26 @@
+// Place all the styles related to the api::reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.review-header h1 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-rating {
+  flex: 1;
+  padding: 10px;
+  width: auto;
+}
+
+.review-comment {
+  padding-top: 10px;
+  border: 1px solid $grey;
+}

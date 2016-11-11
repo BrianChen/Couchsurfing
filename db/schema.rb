@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161106021100) do
+ActiveRecord::Schema.define(version: 20161111190726) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,14 @@ ActiveRecord::Schema.define(version: 20161106021100) do
     t.index ["longitude"], name: "index_listings_on_longitude", using: :btree
     t.index ["start_date"], name: "index_listings_on_start_date", using: :btree
     t.index ["user_id"], name: "index_listings_on_user_id", unique: true, using: :btree
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "listing_id", null: false
+    t.integer  "rating"
+    t.string   "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

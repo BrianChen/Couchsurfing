@@ -2,7 +2,7 @@ class Listing < ApplicationRecord
   validates :user_id, presence: true
 
   belongs_to :user
-
+  has_many :reviews
   has_many :bookings
 
   def self.in_bounds_dates(bounds, dates)

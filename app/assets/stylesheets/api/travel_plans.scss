@@ -1,5 +1,4 @@
 .travel-plans {
-  background-color: $white;
   margin-bottom: 14px;
   border-bottom: 2px solid $greyBorder;
 
@@ -15,6 +14,24 @@
   font-weight: bold;
 }
 
-.travel-plans-content {
-  background-color: $greyBackground;
+.travel-plans-content li {
+  background-color: $white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 5px;
+  border-bottom: 2px solid $greyBorder;
+  &:after{
+    display: block;
+    content: "";
+    clear:both;
+  }
+
+  .contents {
+    float: left;
+  }
+
+  .city {
+    padding-top: 20px;
+  }
 }
