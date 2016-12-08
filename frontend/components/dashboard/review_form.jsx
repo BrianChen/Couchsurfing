@@ -29,12 +29,19 @@ class ReviewForm extends React.Component {
           <h1>Review</h1>
         </header>
         <div className="review-content">
+          <span className="rating-star">
+            <input id="rating-5" type="radio" name="rating" value="5"/>
+            <label for="rating-5">5</label>
+            <input id="rating-4" type="radio" name="rating" value="4"/>
+            <label for="rating4">4</label>
+            <input id="rating3" type="radio" name="rating" value="3"/>
+            <label for="rating3">3</label>
+            <input id="rating2" type="radio" name="rating" value="2"/>
+            <label for="rating2">2</label>
+            <input id="rating1" type="radio" name="rating" value="1"/>
+            <label for="rating1">1</label>
+          </span>
           <form className="review-form" onSubmit={this.handleSubmit}>
-            <input
-              className="review-rating"
-              type= "number"
-              placeholder="Enter rating"
-              onChange={this.update('rating')} /><br/>
             <textarea
               className="review-comment"
               cols="50"

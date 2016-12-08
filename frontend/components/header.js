@@ -61,9 +61,9 @@ class Header extends React.Component {
     } else {
       navButton = (
         <ul className="header-nav-button">
-          <li><button id="join-button" className="nav-button" onClick={this.handleClick.bind(this, true)}>Join</button></li>
-          <li><button id="white-button" className="nav-button" onClick={this.handleClick.bind(this, false)}>Log In</button></li>
-          <li><button id="white-button" className="nav-button" onClick={this.handleGuestLogin}>Guest LogIn</button></li>
+          <li><button id="join-button" onClick={this.handleClick.bind(this, true)}>Join</button></li>
+          <li><button id="white-button" onClick={this.handleClick.bind(this, false)}>Log In</button></li>
+          <li><button id="white-button" onClick={this.handleGuestLogin}>Guest LogIn</button></li>
         </ul>
       )
     }

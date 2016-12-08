@@ -16,7 +16,7 @@ class Api::ListingsController < ApplicationController
     bounds = params[:filters][:bounds]
 
     if (start_date == "" || end_date == "") && bounds
-      @listings = Listing.in_bounds(bounds);
+      @listings = Listing.in_bounds(bounds)
     else
       @listings = Listing.in_bounds_dates(bounds, params[:filters][:dates])
     end
