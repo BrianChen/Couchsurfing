@@ -42,9 +42,12 @@
 }
 
 .rating:hover .rating-star:hover,
-.rating:hover .rating-star:hover ~ .rating-star,
-.rating-input:checked ~ .rating-star {
+.rating:hover .rating-star:hover ~ .rating-star {
     background-position: 0 0;
+}
+
+.rating-input:checked ~ .rating-star {
+  background-position: 0 0;
 }
 
 .rating-star,
