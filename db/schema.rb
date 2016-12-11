@@ -65,5 +65,5 @@ ActiveRecord::Schema.define(version: 20161111190726) do
     t.datetime "updated_at",      null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
-
+  
 end

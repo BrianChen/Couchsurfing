@@ -27,6 +27,7 @@
 
 #filter-form {
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .date-input {
@@ -61,5 +62,37 @@
     display: block;
     content: "";
     clear:both;
+  }
+}
+
+.check-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-input {
+  font-size: 11px;
+  width: 120px;
+  height: 20px;
+}
+
+.check-in-span,
+.check-out-span {
+  padding: 5px;
+}
+
+.dates {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.date-submit-button {
+  background-color: $orange;
+  padding: 5px;
+  border-radius: 5px;
+  color: $white;
+  &:hover{
+    background-color: darken($orange, 20);
   }
 }
