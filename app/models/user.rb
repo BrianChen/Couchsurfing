@@ -16,7 +16,7 @@ class User < ApplicationRecord
     through: :listing,
     source: :bookings
 
-  # has_many :reviews
+  #has_many :reviews
 
   attr_reader :password
   after_initialize :ensure_session_token

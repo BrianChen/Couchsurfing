@@ -1,4 +1,4 @@
-json.extract! user, :id, :name, :email
+json.extract! user, :id, :name, :email, :profile
 # json.user do
 #   json.id user.id
 #   json.name user.name
@@ -16,4 +16,5 @@ json.listing do
   json.accepting_guests user.listing.accepting_guests
   json.start_date user.listing.start_date
   json.end_date user.listing.end_date
+  json.picture user.listing.picture
 end

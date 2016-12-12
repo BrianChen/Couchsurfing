@@ -24,21 +24,32 @@ class BookingItem extends React.Component {
   }
 
   render() {
+    debugger;
+    let booking_dates = this.props.bookingItem.start_date + " - " + this.props.bookingItem.end_date
     return (
       <li>
-        <h1 className="user-name">{this.props.bookingItem.user.name}</h1>
-        <div className="contents">
-          <h1 className="city">{this.props.bookingItem.user.city}</h1>
-          <h1>{this.props.bookingItem.user.email}</h1>
+        <div className="booking-item-div">
+          <div className="booking-picture">
+            <img className="booking-image" src={this.props.bookingItem.listing.picture}/>
+          </div>
+          <div className="booking-info">
+            <div className="contents">
+              <h1 className="address">{this.props.bookingItem.listing.address}</h1>
+              <h1 className="city">{this.props.bookingItem.listing.city}</h1>
+              <h1 className="host-name">{this.props.bookingItem.user.name}</h1>
+              <h1>{this.props.bookingItem.user.email}</h1>
+              <h1 className="booking-dates">{booking_dates}</h1>
+            </div>
+          </div>
+          <Modal
+            isOpen={this.state.modalOpen}
+            onRequestClose={this.onModalClose}
+            style={ReviewModalStyle}
+            >
+            <ReviewFormContainer booking={this.props.bookingItem} closeModal={this.onModalClose}/>
+          </Modal>
+          <button id="review-button" onClick={this.handleClick}>Review</button>
         </div>
-        <Modal
-          isOpen={this.state.modalOpen}
-          onRequestClose={this.onModalClose}
-          style={ReviewModalStyle}
-          >
-          <ReviewFormContainer booking={this.props.bookingItem} closeModal={this.onModalClose}/>
-        </Modal>
-        <button id="review-button" onClick={this.handleClick}>Review</button>
       </li>
     )
   }

@@ -52,7 +52,8 @@ Listing.create!([{
     user_id: 1,
     max_guests: 2,
     start_date: "01-11-2016",
-    end_date: "01-12-2016"
+    end_date: "01-12-2016",
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481510594/floor1_zfka6v.jpg"
   }, {
     address: "958 Greenwich St",
     city: "San Francisco",
@@ -62,7 +63,8 @@ Listing.create!([{
     user_id: 2,
     max_guests: 1,
     start_date: "01-12-2016",
-    end_date: "01-12-2017"
+    end_date: "01-12-2017",
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481510592/floor2_bkbzky.jpg"
   }, {
     address: "926 Howard Street",
     city: "San Francisco",
@@ -72,7 +74,8 @@ Listing.create!([{
     user_id: 3,
     max_guests: 4,
     start_date: "01-12-2016",
-    end_date: "01-06-2017"
+    end_date: "01-06-2017",
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511999/floor3_kkutl7.jpg"
   }, {
     address: "572 5th Avenue",
     city: "New York",
@@ -82,7 +85,8 @@ Listing.create!([{
     user_id: 4,
     max_guests: 1,
     start_date: "01-11-2016",
-    end_date: "01-06-2017"
+    end_date: "01-06-2017",
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481512006/floor4_higmbc.jpg"
   }]);
 
   Booking.create!([{

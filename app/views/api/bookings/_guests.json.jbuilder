@@ -10,3 +10,13 @@ json.user do
   json.email booking.guest.email
   json.city booking.listing.city
 end
+
+json.listing do
+  json.id booking.listing.id
+  json.address booking.listing.address
+  json.city booking.listing.city
+  json.max_guests booking.listing.max_guests
+  json.picture booking.listing.picture
+  json.start_date booking.listing.start_date
+  json.end_date booking.listing.end_date
+end

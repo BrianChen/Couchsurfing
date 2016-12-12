@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161111190726) do
+ActiveRecord::Schema.define(version: 20161212014545) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20161111190726) do
     t.datetime "updated_at",                       null: false
     t.date     "end_date"
     t.date     "start_date"
+    t.string   "picture"
     t.index ["end_date"], name: "index_listings_on_end_date", using: :btree
     t.index ["latitude"], name: "index_listings_on_latitude", using: :btree
     t.index ["longitude"], name: "index_listings_on_longitude", using: :btree
@@ -63,7 +64,8 @@ ActiveRecord::Schema.define(version: 20161111190726) do
     t.string   "interest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "profile"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
-  
+
 end

@@ -30,7 +30,30 @@
     float: left;
   }
 
+  .address {
+    font-weight: bold;
+  }
+
   .city {
-    padding-top: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+
+  .booking-item-div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .booking-image {
+    max-width: 250px;
+    max-height: 200px;
+  }
+
+  .booking-dates {
+    padding-top: 30px;
+  }
+
+  #review-button {
+    margin-top: 40px;
   }
 }
