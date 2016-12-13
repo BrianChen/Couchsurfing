@@ -7,12 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create!([{
-    name: "Jacky Apple",
-    email: "jacky@gmail.com",
+    name: "Sheldon Cooper",
+    email: "sheldon@gmail.com",
     password: "password1",
     birthdate: "03-10-1988",
     gender: "M",
-    interest: "Gardening and traveling"
+    interest: "A neutron walks into a bar and asks how much for a drink. The barman replies for you no charge",
+    profile: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481529327/sheldon_copper_hzlsdj.jpg"
   }, {
     name: "Rickey Williams",
     email: "rickey@gmail.com",

@@ -17,7 +17,7 @@ class ListingDetail extends React.Component {
 
     this.handleClick = this.handleClick.bind(this);
     this.onModalClose = this.onModalClose.bind(this);
-    this.reviewList = this.reviewList.bind(this);
+    // this.reviewList = this.reviewList.bind(this);
   }
 
   handleClick() {
@@ -31,21 +31,28 @@ class ListingDetail extends React.Component {
   }
 
   reviewList(reviews = []) {
-    reviews.map(review => (
-      <ReviewShow rating={review.rating} comment={review.comment} key={review.id} />
-    ))
+    return (
+      <div>
+        {reviews.map(review => (
+          <ReviewShow rating={review.rating} comment={review.comment} key={review.id} />
+        ))}
+      </div>
+    )
   }
 
   render() {
+    debugger;
+    let reviewEls = this.reviewList(this.props.listing.reviews);
+    console.log(reviewEls);
     return (
       <div>
         <h3>Description: {this.props.listing.description}</h3>
         <h5>Address: {this.props.listing.address}</h5>
         <h5>City: {this.props.listing.city}</h5>
         <h5>max_guests: {this.props.listing.max_guests}</h5>
-        <div className="listing-reviews">
+        <div>
           <h3>Reviews</h3>
-          {this.reviewList(this.props.listing.reviews)}
+          {reviewEls}
         </div>
         <Modal
           isOpen={this.state.modalOpen}

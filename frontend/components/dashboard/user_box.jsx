@@ -40,15 +40,17 @@ class UserBox extends React.Component {
     window.addEventListener('click', this.modifyDropdown);
   }
 
-
   render() {
     let host_status = this.props.currentUser.listing.accepting_guests ? "Accepting Guests" : "Not Accepting Guests";
 
     return(
       <section className="user-box-section">
-        <header className="user-box-header">
+        <div className="user-profile">
+          <img className="user-image" src={this.props.currentUser.profile}/>
+        </div>
+        <div className="user-box-header">
           <h1>{this.props.currentUser.name}</h1>
-        </header>
+        </div>
         <div className="guest-dropdown">
           <button onClick={this.toggleDropDown} className="dropdown-button">{host_status} ▼</button>
           <div id="toggle_dropdown" className="dropdown-content">

@@ -24,7 +24,6 @@ class BookingItem extends React.Component {
   }
 
   render() {
-    debugger;
     let booking_dates = this.props.bookingItem.start_date + " - " + this.props.bookingItem.end_date
     return (
       <li>

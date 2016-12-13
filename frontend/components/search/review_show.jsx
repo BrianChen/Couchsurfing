@@ -1,12 +1,21 @@
 import React from 'react';
 
-const ReviewShow = ({ rating, comment }) => (
-  <div>
-    <ul>
-      <li>Rating: {rating}</li>
-      <li>{comment}</li>
-    </ul>
-  </div>
-);
+class ReviewShow extends React.Component {
+
+  constructor(props){
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <ul>
+          <li>Rating: {this.props.rating}</li>
+          <li>{this.props.comment}</li>
+        </ul>
+      </div>
+    )
+  }
+}
 
 export default ReviewShow;

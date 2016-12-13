@@ -5,6 +5,9 @@
 }
 
 .user-box-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 25px;
   border-radius: 5px;
   background-color: white;
@@ -14,7 +17,7 @@
   padding: 25px;
   margin-left: 25px;
   margin-right: 25px;
-  height: 128px;
+  height: 400px;
 }
 
 .user-name {
@@ -32,8 +35,6 @@
     background-color: darken($orange, 20);
   }
 }
-
-
 
 .user-box-header {
   padding: 20px;
@@ -60,7 +61,6 @@
   border: 1px solid $greyBorder;
 }
 
-
 .dropdown-button {
   width: 100%;
 }
@@ -74,7 +74,9 @@
   background-color: rgb(222, 222, 222);
 }
 
-.show {display:block;}
+.show {
+  display:block;
+}
 
 .accepting-button {
   color: green;
@@ -83,4 +85,9 @@
 
 .not-accepting-button {
   color: red;
+}
+
+.user-image {
+  max-width: 300px;
+  max-height: 300px;
 }
