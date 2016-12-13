@@ -17,7 +17,7 @@ class ListingDetail extends React.Component {
 
     this.handleClick = this.handleClick.bind(this);
     this.onModalClose = this.onModalClose.bind(this);
-    // this.reviewList = this.reviewList.bind(this);
+    this.reviewList = this.reviewList.bind(this);
   }
 
   handleClick() {
@@ -43,15 +43,22 @@ class ListingDetail extends React.Component {
   render() {
     debugger;
     let reviewEls = this.reviewList(this.props.listing.reviews);
-    console.log(reviewEls);
     return (
-      <div>
-        <h3>Description: {this.props.listing.description}</h3>
-        <h5>Address: {this.props.listing.address}</h5>
-        <h5>City: {this.props.listing.city}</h5>
-        <h5>max_guests: {this.props.listing.max_guests}</h5>
-        <div>
-          <h3>Reviews</h3>
+      <div className="listing-detail">
+        <img className="listing-detail-image" src={this.props.listing.picture} />
+        <div className="listing-detail-content">
+          <div className="listing-title-book">
+            <div className="address-city">
+              <h2 className="listing-detail-address">{this.props.listing.address}</h2>
+              <h2 className="listing-detail-city">{this.props.listing.city}</h2>
+            </div>
+            <button className="booking-button" onClick={this.handleClick}>Book Floor</button>
+          </div>
+          <span className="description">{this.props.listing.description}</span>
+          <span className="max-guests">Maximum Guests: {this.props.listing.max_guests}</span>
+        </div>
+        <div className="listing-detail-reviews">
+          <h2 className="reviews">Reviews</h2>
           {reviewEls}
         </div>
         <Modal
@@ -60,7 +67,6 @@ class ListingDetail extends React.Component {
           >
           <BookingFormContainer listing={this.props.listing} />
         </Modal>
-        <button className="booking-button" onClick={this.handleClick}>Book Floor</button>
       </div>
     )
   }

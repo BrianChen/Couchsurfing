@@ -21,7 +21,6 @@ class ListingShow extends React.Component {
           <ListingDetail listing={this.props.listing}/>
         </div>
         <div className="single-listing-map">
-          <Link to="/">Back to Listings</Link>
           <ListingMap
             listings={listings}
             listingId={this.props.listingId}

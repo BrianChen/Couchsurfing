@@ -60,7 +60,9 @@ Listing.create!([{
     city: "San Francisco",
     longitude: -122.415550,
     latitude: 37.801958,
-    description: "Brown wood. May have splinters.",
+    description: "One of the nicer floors out there. The floor is made of brown wood, as seen on the picture. It even includes some plants for a nice relaxing atmosphere. Rated 5 stars on ratemyfloor.com!
+
+    It is perfectly located in downtown San Francisco. Has some of the best resturants in town.",
     user_id: 2,
     max_guests: 1,
     start_date: "01-12-2016",

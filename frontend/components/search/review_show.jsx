@@ -9,10 +9,8 @@ class ReviewShow extends React.Component {
   render() {
     return (
       <div>
-        <ul>
-          <li>Rating: {this.props.rating}</li>
-          <li>{this.props.comment}</li>
-        </ul>
+        <h4> Rating: {this.props.rating}</h4>
+        <h4>{this.props.comment}</h4>
       </div>
     )
   }

@@ -1,0 +1,60 @@
+.listing-detail-image {
+  width: 100%;
+}
+
+.listing-detail {
+  padding: 10px;
+}
+
+.listing-detail-content {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-detail-address,
+.listing-detail-city {
+  text-align: center;
+  font-weight: bold;
+}
+
+.description {
+  padding-top: 20px;
+}
+
+.max-guests {
+  padding-top: 10px;
+}
+
+.reviews {
+  font-weight: bold;
+  text-align: center;
+}
+
+.listing-title-book {
+  display: flex;
+  justify-content: space-around;
+}
+
+.booking-button {
+  background-color: $orange;
+  padding: 5px;
+  border-radius: 5px;
+  color: $white;
+  &:hover{
+    background-color: darken($orange, 20);
+  }
+}
+
+.listing-detail-reviews {
+  padding-top: 10px;
+}
+
+.reviews {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.rating {
+  padding-bottom: 10px;
+}
