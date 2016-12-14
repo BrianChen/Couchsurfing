@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchContainer from './search_container';
 import { withRouter } from 'react-router';
 
 class SearchBar extends React.Component {
@@ -54,7 +55,10 @@ class SearchBar extends React.Component {
     // let searchBox = new google.maps.places.searchBox(document.getElmentById('map-search'));
     // google.maps.event.addListener(searchBox, 'places_changed', this.
     // })
-    this.props.router.push('/search');
+
+    // this.props.router.location.search = this.state.city;
+    // this.props.router.push('/search');
+    <SearchContainer />
   }
 
   update(property) {
