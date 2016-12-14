@@ -1,0 +1,57 @@
+.booking-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.booking-header h1 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.booking-dates {
+  display: flex;
+  justify-content: space-between;
+}
+
+.check-in-span,
+.check-out-span {
+  display: block;
+  padding-bottom: 10px;
+}
+
+.booking-check-in,
+.booking-check-out {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-start-date,
+.booking-end-date {
+  width: 200px;
+  margin-top: 7px;
+}
+
+.booking-guests {
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+.booking-guests-input {
+  margin-top: 7px;
+}
+
+#booking-button {
+  background-color: $orange;
+  padding: 5px;
+  border-radius: 5px;
+  color: $white;
+  &:hover{
+    background-color: darken($orange, 20);
+  }
+}
+
+.booking-button-div {
+  padding-top: 10px;
+  text-align: center;
+}

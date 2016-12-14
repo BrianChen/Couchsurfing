@@ -30,23 +30,36 @@ class BookingForm extends React.Component {
     return (
       <div>
         <header className="booking-header">
-          <h1>Book a floor now!</h1>
+          <h1>Book this floor now!</h1>
         </header>
         <div className="booking-content">
           <form className="booking-form" onSubmit={this.handleSubmit}>
-            <input
-              className="booking-start-date"
-              type="date"
-              onChange={this.updateState('start_date')} /><br/>
-            <input
-              className="booking-end-date"
-              type="date"
-              onChange={this.updateState('end_date')} /><br/>
-            <input
-              className="booking-guests"
-              type="number"
-              onChange={this.updateState('guests')} /><br/>
-            <button id="booking-button" type="submit">Book This Floor</button>
+            <div className="booking-dates">
+              <div className="booking-check-in">
+                <span className="booking-check-in-span">Check In</span>
+                <input
+                  className="booking-start-date"
+                  type="date"
+                  onChange={this.updateState('start_date')} />
+              </div>
+              <div className="booking-check-out">
+                <span className="booking-check-out-span">Check Out</span>
+                <input
+                  className="booking-end-date"
+                  type="date"
+                  onChange={this.updateState('end_date')} />
+              </div>
+            </div>
+            <div className="booking-guests">
+              <span className="booking-guests-span">Guests</span>
+              <input
+                className="booking-guests-input"
+                type="number"
+                onChange={this.updateState('guests')} />
+            </div>
+            <div className="booking-button-div">
+              <button id="booking-button" type="submit">Book This Floor</button>
+            </div>
           </form>
         </div>
       </div>
