@@ -2,20 +2,21 @@ import React from 'react';
 import MarkerManager from '../../util/marker_manager';
 import { withRouter } from 'react-router';
 
-let mapOptions = {
-  center: {lat: 37.773972, lng: -122.431297},
-  zoom: 13
-};
 
 class ListingMap extends React.Component {
 
   constructor(props) {
     super(props);
+    this.mapOptions = {
+      center: this.props.center,
+      zoom: 11
+    };
   }
 
   componentDidMount() {
+    debugger;
     const map = this.refs.map;
-    this.map = new google.maps.Map(map, mapOptions);
+    this.map = new google.maps.Map(map, this.mapOptions);
     this.MarkerManager = new MarkerManager(this.map, this._handleMarkerClick.bind(this));
     if (this.props.showListing) {
       this.props.retrieveListing(this.props.listingId)
@@ -42,7 +43,8 @@ class ListingMap extends React.Component {
       const { north, south, east, west } = this.map.getBounds().toJSON();
       const bounds = {
         northEast: { lat: north, lng: east },
-        southWest: { lat: south, lng: west } };
+        southWest: { lat: south, lng: west }
+      };
       this.props.updateFilter('bounds', bounds);
     });
     google.maps.event.addListener(this.map, 'click', e => {

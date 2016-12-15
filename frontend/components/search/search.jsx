@@ -3,7 +3,7 @@ import ListingMap from './listing_map';
 import ListingIndex from './listing_index';
 import FilterForm from './filter_form';
 
-const Search = ({listings, updateFilter, startDate, endDate}) => {
+const Search = ({listings, updateFilter, startDate, endDate, location}) => {
   return (
     <div className="search-page">
       <div className="left-half">
@@ -12,9 +12,11 @@ const Search = ({listings, updateFilter, startDate, endDate}) => {
       </div>
       <div className="right-half">
         <ListingMap
+          center={location}
           listings={listings}
           showListing={false}
-          updateFilter={updateFilter} />
+          updateFilter={updateFilter}
+        />
       </div>
     </div>
   );

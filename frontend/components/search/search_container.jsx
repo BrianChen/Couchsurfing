@@ -8,7 +8,8 @@ const mapStateToProps = state => {
   return ({
     listings: asArray(state),
     startDate: state.filters.startDate,
-    endDate: state.filters.endDate
+    endDate: state.filters.endDate,
+    location: state.location
   }
   )
 }

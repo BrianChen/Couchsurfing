@@ -15,18 +15,12 @@ class Root extends React.Component {
     this.getBookings = this.getBookings.bind(this);
     this.ensureLogin = this.ensureLogin.bind(this);
     this.checkLogin = this.checkLogin.bind(this);
-    this.method = this.method.bind(this);
   }
 
   ensureLogin(nextState, replace) {
     if (this.props.store.getState().session.currentUser === {} || this.props.store.getState().session.currentUser === 'undefined') {
       replace('/');
     }
-  }
-
-  method(nextState, replace) {
-    console.log(this.props.store);
-    debugger;
   }
 
   checkLogin(nextState, replace) {
@@ -50,7 +44,7 @@ class Root extends React.Component {
           <Route path="/" component={App}>
             <IndexRoute component={SplashContainer} onEnter={this.checkLogin}/>
             <Route path="/dashboard" component={DashboardContainer} onEnter={this.getBookings}/>
-            <Route path="/search" component={SearchContainer} onEnter={this.method} />
+            <Route path="/search" component={SearchContainer} onEnter={this.ensureLogin} />
             <Route path="/listings/:listingId" component={ListingShowContainer} onEnter={this.ensureLogin} />
           </Route>
         </Router>

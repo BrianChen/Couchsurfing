@@ -74,7 +74,7 @@ class Header extends React.Component {
     let searchBar;
     if (this.props.currentUser) {
       searchBar = (
-        <SearchBar updateFilter={this.props.updateFilter}/>
+        <SearchBar updateFilter={this.props.updateFilter} updateLocation={this.props.updateLocation}/>
       )
     }
     return searchBar;
