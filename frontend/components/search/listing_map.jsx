@@ -14,7 +14,6 @@ class ListingMap extends React.Component {
   }
 
   componentDidMount() {
-    debugger;
     const map = this.refs.map;
     this.map = new google.maps.Map(map, this.mapOptions);
     this.MarkerManager = new MarkerManager(this.map, this._handleMarkerClick.bind(this));
@@ -50,7 +49,7 @@ class ListingMap extends React.Component {
     google.maps.event.addListener(this.map, 'click', e => {
       const coords = {
         lat: e.latLng.lat(),
-        lng: latLng.lng()
+        lng: e.latLng.lng()
       };
       this._handleMarkerClick(coords);
     })
@@ -59,7 +58,6 @@ class ListingMap extends React.Component {
   render() {
     return (
       <div id='map-container' ref='map' className="map">
-        MAP
       </div>
     )
   }

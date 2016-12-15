@@ -11,7 +11,7 @@ const mapStateToProps = ({ session }) => ({
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   login: () => dispatch(login()),
-  guestLogin: () => dispatch(login({email: "sheldon@gmail.com", password: "password1" })),
+  guestLogin: () => dispatch(login({email: "steph@gmail.com", password: "password1" })),
   updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
   updateLocation: (location) => dispatch(updateLocation(location))
 });
