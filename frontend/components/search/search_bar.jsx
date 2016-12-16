@@ -58,7 +58,6 @@ class SearchBar extends React.Component {
     let geocoder = new google.maps.Geocoder();
     geocoder.geocode({'address': this.state.city}, (results, status) => {
       if (status == google.maps.GeocoderStatus.OK) {
-        debugger;
         const location = {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()}
         this.props.updateLocation(location);
         this.props.router.replace('/search');

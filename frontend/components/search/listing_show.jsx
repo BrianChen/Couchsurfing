@@ -14,7 +14,7 @@ class ListingShow extends React.Component {
     const listings = {
       [this.props.listingId]: this.props.listing
     }
-
+    const center = {lat: this.props.listing.latitude, lng: this.props.listing.longitude};
     return (
       <div className="single-listing">
         <div className="left-half">
@@ -22,6 +22,7 @@ class ListingShow extends React.Component {
         </div>
         <div className="single-listing-map">
           <ListingMap
+            center={center}
             listings={listings}
             listingId={this.props.listingId}
             showListing={true}

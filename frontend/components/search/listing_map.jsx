@@ -2,14 +2,13 @@ import React from 'react';
 import MarkerManager from '../../util/marker_manager';
 import { withRouter } from 'react-router';
 
-
 class ListingMap extends React.Component {
 
   constructor(props) {
     super(props);
     this.mapOptions = {
       center: this.props.center,
-      zoom: 11
+      zoom: 13
     };
   }
 
@@ -51,7 +50,6 @@ class ListingMap extends React.Component {
         lat: e.latLng.lat(),
         lng: e.latLng.lng()
       };
-      this._handleMarkerClick(coords);
     })
   }
 
