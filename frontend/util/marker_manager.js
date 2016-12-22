@@ -1,4 +1,3 @@
-
 export default class MarkerManager {
   constructor(map, handleClick) {
     this.map = map;
@@ -24,7 +23,6 @@ export default class MarkerManager {
     const listingIds = this.listings.map( listing => listing.id );
     return this.markers.filter( marker => !listingIds.includes(marker.listingId) );
   }
-
 
   _createMarkerFromListing(listing) {
     let shape = {
