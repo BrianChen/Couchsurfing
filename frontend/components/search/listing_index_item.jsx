@@ -15,7 +15,7 @@ class ListingIndexItem extends React.Component {
 
   render() {
     return (
-      <div className="listing-index-item" onClick={this.handleClick}>
+      <div className="listing-index-item" onClick={this.handleClick} >
         <div className="listings-list">
           <div className="listing-content">
             <div className="listing-image-div">

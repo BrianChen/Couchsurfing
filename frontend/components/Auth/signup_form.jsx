@@ -46,8 +46,8 @@ class SignupForm extends React.Component {
             <button id="sign-up-submit-button" type="submit">Join with Email</button>
           </form>
           <div className="sign-up-footer">
-            <p>Already a Member?</p>
-            <button id="white-button" onClick={this.props.handleClick.bind(null,false)}>Log In</button>
+            <p>Don't have an account? Use a guest account</p>
+            <button id="white-button" onClick={this.props.guestLogin}>Guest Login</button>
           </div>
         </div>
       </div>

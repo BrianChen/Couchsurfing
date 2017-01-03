@@ -1,7 +1,6 @@
 import React from 'react';
 import {hashHistory, withRouter} from 'react-router';
 
-
 class LoginForm extends React.Component {
 
   constructor(props) {
@@ -44,8 +43,8 @@ class LoginForm extends React.Component {
             <button id="login-submit-button" type="submit">Log In</button>
           </form>
           <div className="sign-up-footer">
-            <p>Don't have an account?</p>
-            <button onClick={this.props.handleClick.bind(null, true)}id="white-button">Join</button>
+            <p>Don't have an account? Use a guest account</p>
+            <button onClick={this.props.guestLogin}id="white-button">Guest Login</button>
           </div>
         </div>
       </div>
