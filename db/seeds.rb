@@ -13,7 +13,7 @@ User.create!([{
     birthdate: "03-10-1988",
     gender: "M",
     interest: "A neutron walks into a bar and asks how much for a drink. The barman replies for you no charge",
-    profile: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481529327/sheldon_copper_hzlsdj.jpg"
+    profile: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1483515910/guest_ybqwf2.png"
   }, {
     name: "Rickey Williams",
     email: "rickey@gmail.com",
@@ -43,13 +43,13 @@ User.create!([{
     gender: "M",
     interest: "Interested in interesting stuff"
   },{
-    name: "Steph Curry",
+    name: "Guest",
     email: "steph@gmail.com",
     password: "password1",
     birthdate: "05-12-1988",
     gender: "M",
     interest: "",
-    profile: 'http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481767714/steph_curry_pujkfj.gif'
+    profile: 'http://res.cloudinary.com/dxfjyn0nq/image/upload/v1483515910/guest_ybqwf2.png'
   },{
     name: "Elon Musk",
     email: "elon@gmail.com",
