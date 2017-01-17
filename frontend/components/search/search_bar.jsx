@@ -55,12 +55,13 @@ class SearchBar extends React.Component {
     // let searchBox = new google.maps.places.searchBox(document.getElmentById('map-search'));
     // google.maps.event.addListener(searchBox, 'places_changed', this.
     // })
+    debugger;
     let geocoder = new google.maps.Geocoder();
     geocoder.geocode({'address': this.state.city}, (results, status) => {
       if (status == google.maps.GeocoderStatus.OK) {
         const location = {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()}
         this.props.updateLocation(location);
-        this.props.router.replace('/search');
+        this.props.router.push('/search');
       }
     })
   }
