@@ -4,7 +4,7 @@ import SignUpFormContainer from './Auth/signup_form_container';
 import LoginFormContainer from './Auth/login_form_container';
 import ModalStyle from './Auth/modal_style';
 import { hashHistory, withRouter, Link } from 'react-router';
-import SearchBar from './search/search_bar';
+import SearchBarContainer from './search/search_bar_container';
 
 class Header extends React.Component {
 
@@ -74,13 +74,13 @@ class Header extends React.Component {
     let searchBar;
     if (this.props.currentUser) {
       searchBar = (
-        <SearchBar updateFilter={this.props.updateFilter} updateLocation={this.props.updateLocation}/>
+        <SearchBarContainer />
       )
     }
     return searchBar;
   }
 
-  render(){
+  render() {
     let component = (this.state.signup) ? <SignUpFormContainer closeModal={this.onModalClose} handleClick={this.handleClick}/> : <LoginFormContainer closeModal={this.onModalClose} handleClick={this.handleClick}/>;
     return (
       <div className = "header-container">

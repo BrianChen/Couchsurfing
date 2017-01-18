@@ -10,15 +10,14 @@ class ListingIndex extends React.Component {
   }
 
   handleClick() {
-    debugger;
     let geocoder = new google.maps.Geocoder();
     geocoder.geocode({'address': 'san francisco'}, (results, status) => {
       if (status == google.maps.GeocoderStatus.OK) {
-        const location = {
+        const bounds = {
           lat: results[0].geometry.location.lat(),
           lng: results[0].geometry.location.lng()
         }
-        this.props.updateLocation(location);
+        this.props.updateFilter('bounds', bounds);
         this.props.router.pushState(null, '/search');
       }
     })

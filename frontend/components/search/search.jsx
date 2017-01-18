@@ -2,7 +2,6 @@ import React from 'react';
 import ListingMap from './listing_map';
 import ListingIndexContainer from './listing_index_container';
 import FilterForm from './filter_form';
-import { updateLocation } from '../../actions/location_actions';
 
 class Search extends React.Component {
   constructor(props){
@@ -12,7 +11,7 @@ class Search extends React.Component {
       updateFilter: this.props.updateFilter,
       startDate: this.props.startDate,
       endDate: this.props.endDate,
-      location: this.props.location
+      center: this.props.center
     }
   }
 
@@ -29,7 +28,7 @@ class Search extends React.Component {
       updateFilter: this.props.updateFilter,
       startDate: this.props.startDate,
       endDate: this.props.endDate,
-      location: this.props.location
+      center: this.props.center
     })
   }
 
@@ -44,7 +43,7 @@ class Search extends React.Component {
         </div>
         <div className="right-half">
           <ListingMap
-            center={this.props.location}
+            center={this.props.center}
             listings={this.props.listings}
             showListing={false}
             updateFilter={this.props.updateFilter}

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { updateFilter } from '../../actions/filter_actions';
-import ListingIndex from './listing_index';
+import SearchBar from './search_bar';
 
 const mapStateToProps = state => ({
 
@@ -12,5 +12,5 @@ const mapDispatchToProps = dispatch => ({
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
-)(ListingIndex);
+  mapDispatchToProps,
+)(SearchBar);

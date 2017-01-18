@@ -1,8 +1,8 @@
 import merge from 'lodash/merge';
-import { UPDATE_FILTER, UPDATE_BOUNDS } from '../actions/filter_actions';
+import { UPDATE_FILTER } from '../actions/filter_actions';
 
 let defaultState = {
-  bounds: {},
+  bounds: {center: {}, northEast: {}, southWest: {}},
   dates: {start_date: "", end_date: ""}
 }
 
@@ -13,10 +13,6 @@ const FiltersReducer = (state = defaultState, action) => {
     case UPDATE_FILTER:
       newState = {[action.filter]: action.value}
       return merge({}, state, newState);
-    case UPDATE_BOUNDS:
-      newState = merge({}, state);
-      newState.bounds = action.bounds;
-      return newState;
     default:
       return state;
   }

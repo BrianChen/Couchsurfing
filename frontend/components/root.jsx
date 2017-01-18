@@ -18,7 +18,6 @@ class Root extends React.Component {
   }
 
   ensureLogin(nextState, replace) {
-    debugger;
     if (this.props.store.getState().session.currentUser === {} || this.props.store.getState().session.currentUser === 'undefined') {
       replace('/');
     }

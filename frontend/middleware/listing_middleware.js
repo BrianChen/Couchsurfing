@@ -1,7 +1,7 @@
 import { createListing, updateListing, fetchListings, fetchListing } from '../util/listing_api_util';
 import { CREATE_LISTING, UPDATE_LISTING, RETRIEVE_LISTINGS, RETRIEVE_LISTING, RECEIVE_LISTINGS, RECEIVE_LISTING, retrieveListings, receiveListings, receiveListing } from '../actions/listing_actions';
 import { receiveCurrentUser } from '../actions/session_actions';
-import { UPDATE_FILTER, UPDATE_BOUNDS } from '../actions/filter_actions';
+import { UPDATE_FILTER } from '../actions/filter_actions';
 
 export default ({getState, dispatch}) => next => action => {
   const success = (data) => dispatch(receiveListings(data));
@@ -22,10 +22,6 @@ export default ({getState, dispatch}) => next => action => {
     case RETRIEVE_LISTING:
       fetchListing(action.id, listingSuccess, error);
       return next(action);
-    case UPDATE_BOUNDS:
-      next(action);
-      dispatch(retreiveListings());
-      break;
     case UPDATE_FILTER:
       next(action);
       dispatch(retrieveListings());

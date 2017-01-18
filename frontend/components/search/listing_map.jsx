@@ -6,7 +6,7 @@ class ListingMap extends React.Component {
 
   constructor(props) {
     super(props);
-    this.mapOptions = {
+    this.state = {
       center: this.props.center,
       zoom: 13
     };
@@ -14,13 +14,31 @@ class ListingMap extends React.Component {
 
   componentDidMount() {
     const map = this.refs.map;
-    this.map = new google.maps.Map(map, this.mapOptions);
+    this.map = new google.maps.Map(map, this.state);
     this.MarkerManager = new MarkerManager(this.map, this._handleMarkerClick.bind(this));
     if (this.props.showListing) {
       this.props.retrieveListing(this.props.listingId)
     } else {
       this._registerListeners();
       this.MarkerManager.updateMarkers(this.props.listings);
+    }
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (this.state.center.lat !== newProps.center.lat && this.state.center.lng !== newProps.center.lng) {
+      this.setState({
+        center: newProps.center,
+        zoom: 13
+      });
+      const map = this.refs.map;
+      this.map = new google.maps.Map(map, this.state);
+      this.MarkerManager = new MarkerManager(this.map, this._handleMarkerClick.bind(this));
+      if (this.props.showListing) {
+        this.props.retrieveListing(this.props.listingId);
+      } else {
+        this._registerListeners();
+        this.MarkerManager.updateMarkers(this.props.listings);
+      }
     }
   }
 
@@ -43,6 +61,7 @@ class ListingMap extends React.Component {
         northEast: { lat: north, lng: east },
         southWest: { lat: south, lng: west }
       };
+      debugger;
       this.props.updateFilter('bounds', bounds);
     });
     google.maps.event.addListener(this.map, 'click', e => {
