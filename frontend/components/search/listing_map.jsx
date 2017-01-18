@@ -30,15 +30,7 @@ class ListingMap extends React.Component {
         center: newProps.center,
         zoom: 13
       });
-      const map = this.refs.map;
-      this.map = new google.maps.Map(map, this.state);
-      this.MarkerManager = new MarkerManager(this.map, this._handleMarkerClick.bind(this));
-      if (this.props.showListing) {
-        this.props.retrieveListing(this.props.listingId);
-      } else {
-        this._registerListeners();
-        this.MarkerManager.updateMarkers(this.props.listings);
-      }
+      this.map.setCenter(newProps.center);
     }
   }
 
