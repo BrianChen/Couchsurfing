@@ -7,7 +7,7 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      city: "",
+      city: "New York City",
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -23,7 +23,7 @@ class SearchBar extends React.Component {
         this.props.updateFilter('bounds', bounds);
         this.props.router.replace('/search');
       }
-    })
+    });
   }
 
   update(property) {
@@ -32,8 +32,9 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <form id="map-search" className="header-search-bar" onSubmit={this.handleSubmit}>
+      <form id="map-search" className="header-search-bar" autoComplete="off" onSubmit={this.handleSubmit}>
         <input onChange={this.update('city')} type="text" id="search-input" name="search" value={this.state.city} placeholder="Where are you going?"></input>
+        <button className="search-btn" onClick={this.handleSubmit}/>
       </form>
     )
   }

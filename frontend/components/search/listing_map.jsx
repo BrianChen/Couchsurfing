@@ -53,7 +53,6 @@ class ListingMap extends React.Component {
         northEast: { lat: north, lng: east },
         southWest: { lat: south, lng: west }
       };
-      debugger;
       this.props.updateFilter('bounds', bounds);
     });
     google.maps.event.addListener(this.map, 'click', e => {

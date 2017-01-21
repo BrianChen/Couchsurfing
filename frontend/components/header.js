@@ -53,8 +53,7 @@ class Header extends React.Component {
     if (this.props.currentUser) {
       navButton = (
         <ul className="header-nav-button">
-          <Link to="/search" id="my-profile-button" activeClassName="active" className="nav-button" >Find Floors</Link>
-          <Link to="/dashboard" className="nav-button" activeClassName="active">My Dashboard</Link>
+          <Link to="/dashboard" className="nav-button">My Dashboard</Link>
           <Link to="/" id="log-out-button" className="nav-button" onClick={this.handleLogOut}>Log Out</Link>
         </ul>
       )
