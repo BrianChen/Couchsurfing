@@ -134,5 +134,38 @@
   align-self: center;
   padding: 9px;
   background: url(http://res.cloudinary.com/dxfjyn0nq/image/upload/v1484980407/search_f0ekvj.png) no-repeat;
+}
 
+.no-listings {
+  display:flex;
+  flex-direction: column;
+  padding: 30px;
+  padding-left: 50px;
+}
+
+.no-results-text {
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 7px
+}
+
+.try-another-text {
+  padding-top: 7px;
+}
+
+.recommended-list {
+  padding-top: 7px;
+  padding-left: 20px;
+  list-style: circle;
+}
+
+.listing-index > h1 {
+  font-size: 35px;
+}
+
+.recommended-list > li {
+  padding-top: 2px;
+}
+.recommended-list > li:hover {
+  text-decoration: underline;
 }

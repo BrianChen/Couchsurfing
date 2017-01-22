@@ -6,21 +6,19 @@ class ListingIndex extends React.Component {
 
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  handleClick(city) {
     let geocoder = new google.maps.Geocoder();
-    geocoder.geocode({'address': 'san francisco'}, (results, status) => {
+    geocoder.geocode({'address': city}, (results, status) => {
       if (status == google.maps.GeocoderStatus.OK) {
         const bounds = {
-          lat: results[0].geometry.location.lat(),
-          lng: results[0].geometry.location.lng()
+          center: {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()}
         }
         this.props.updateFilter('bounds', bounds);
-        this.props.router.pushState(null, '/search');
+        this.props.router.replace('/search');
       }
-    })
+    });
   }
 
   render() {
@@ -29,12 +27,12 @@ class ListingIndex extends React.Component {
         <div className="listing-index">
           <h1>Listings </h1>
           <div className="no-listings">
-            <span className="no-listings-text" >No Results</span>
-            <span>Try another city. Here are some ideas:</span>
-            <ul>
-              <li onClick={this.handleClick}>San Francisco</li>
-              <li onClick={this.handleClick}>New York</li>
-              <li onClick={this.handleClick}>Hong Kong</li>
+            <span className="no-results-text">No Results</span>
+            <span className="try-another-text">Try another city. Here are some ideas:</span>
+            <ul className="recommended-list">
+              <li onClick={this.handleClick.bind(this,"San Francisco")}>San Francisco</li>
+              <li onClick={this.handleClick.bind(this,"New York")}>New York</li>
+              <li onClick={this.handleClick.bind(this,"Hong Kong")}>Hong Kong</li>
             </ul>
           </div>
 
