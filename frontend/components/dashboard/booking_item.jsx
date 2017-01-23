@@ -14,13 +14,13 @@ class BookingItem extends React.Component {
   }
 
   onModalClose() {
-    this.setState({modalOpen: false})
+    this.setState({modalOpen: false});
   }
 
   handleClick() {
     this.setState({
       modalOpen: true
-    })
+    });
   }
 
   render() {

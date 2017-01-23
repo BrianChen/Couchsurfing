@@ -17,7 +17,8 @@
   padding: 25px;
   margin-left: 25px;
   margin-right: 25px;
-  height: 400px;
+  height: 20%;
+  min-width: 200px;
 }
 
 .user-name {
@@ -88,6 +89,6 @@
 }
 
 .user-image {
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 100%;
+	height: auto;
 }

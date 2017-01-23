@@ -31,8 +31,8 @@ class ListingIndex extends React.Component {
             <span className="try-another-text">Try another city. Here are some ideas:</span>
             <ul className="recommended-list">
               <li onClick={this.handleClick.bind(this,"San Francisco")}>San Francisco</li>
-              <li onClick={this.handleClick.bind(this,"New York")}>New York</li>
-              <li onClick={this.handleClick.bind(this,"Hong Kong")}>Hong Kong</li>
+              <li onClick={this.handleClick.bind(this,"New York City")}>New York City</li>
+              <li onClick={this.handleClick.bind(this,"Hong Kong City")}>Hong Kong City</li>
             </ul>
           </div>
 

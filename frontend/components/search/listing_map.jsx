@@ -25,7 +25,7 @@ class ListingMap extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (this.state.center.lat !== newProps.center.lat && this.state.center.lng !== newProps.center.lng) {
+    if (this.state.center.lat !== newProps.center.lat && this.state.center.lng !== newProps.center.lng){
       this.setState({
         center: newProps.center,
         zoom: 13

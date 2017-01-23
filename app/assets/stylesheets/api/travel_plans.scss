@@ -20,6 +20,7 @@
   width: 80%;
   border-radius: 5px;
   border-bottom: 2px solid $greyBorder;
+  min-width: 550px;
   &:after{
     display: block;
     content: "";
@@ -42,11 +43,18 @@
   .booking-item-div {
     display: flex;
     justify-content: space-around;
+    overflow: hidden;
+    min-width: 500px;
   }
 
   .booking-image {
     max-width: 250px;
     max-height: 200px;
+  }
+
+  .booking-picture {
+    min-width: 200px;
+    height:auto;
   }
 
   .booking-dates {
