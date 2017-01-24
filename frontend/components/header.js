@@ -52,18 +52,36 @@ class Header extends React.Component {
     let navButton;
     if (this.props.currentUser) {
       navButton = (
-        <ul className="header-nav-button">
-          <Link to="/dashboard" className="nav-button">My Dashboard</Link>
-          <Link to="/" id="log-out-button" className="nav-button" onClick={this.handleLogOut}>Log Out</Link>
-        </ul>
+        <div>
+          <ul className="header-nav-button">
+            <Link to="/dashboard" className="nav-button">My Dashboard</Link>
+            <Link to="/" id="log-out-button" className="nav-button" onClick={this.handleLogOut}>Log Out</Link>
+          </ul>
+
+          <select>
+            <option value="/" selected="selected">Select</option>
+            <option>Join</option>
+            <option>Log In</option>
+            <option>Guest Login</option>
+          </select>
+        </div>
       )
     } else {
       navButton = (
-        <ul className="header-nav-button">
-          <li><button id="join-button" onClick={this.handleClick.bind(this, true)}>Join</button></li>
-          <li><button id="white-button" onClick={this.handleClick.bind(this, false)}>Log In</button></li>
-          <li><button id="white-button" onClick={this.handleGuestLogin}>Guest LogIn</button></li>
-        </ul>
+        <div>
+          <ul className="header-nav-button">
+            <li><button id="join-button" onClick={this.handleClick.bind(this, true)}>Join</button></li>
+            <li><button id="white-button" onClick={this.handleClick.bind(this, false)}>Log In</button></li>
+            <li><button id="white-button" onClick={this.handleGuestLogin}>Guest LogIn</button></li>
+          </ul>
+
+          <select >
+            <option value="/" selected="selected">Select</option>
+            <option>Join</option>
+            <option>Log In</option>
+            <option>Guest Login</option>
+          </select>
+        </div>
       )
     }
     return navButton;

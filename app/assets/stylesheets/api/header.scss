@@ -81,3 +81,12 @@
   text-decoration: underline;
   color: $orange;
 }
+
+select {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .header-nav-button { display: none; }
+  select { display:inline-block; }
+}
