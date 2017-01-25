@@ -41,7 +41,7 @@ class Header extends React.Component {
 
   componentWillReceiveProps(newProps) {
     if (!this.props.currentUser && newProps.currentUser ) {
-      this.props.router.push('/dashboard');
+      this.props.router.push('/search');
     }
     if (this.props.currentUser && !newProps.currentUser) {
       this.props.router.push('/');
@@ -57,13 +57,6 @@ class Header extends React.Component {
             <Link to="/dashboard" className="nav-button">My Dashboard</Link>
             <Link to="/" id="log-out-button" className="nav-button" onClick={this.handleLogOut}>Log Out</Link>
           </ul>
-
-          <select>
-            <option value="/" selected="selected">Select</option>
-            <option>Join</option>
-            <option>Log In</option>
-            <option>Guest Login</option>
-          </select>
         </div>
       )
     } else {
@@ -74,13 +67,6 @@ class Header extends React.Component {
             <li><button id="white-button" onClick={this.handleClick.bind(this, false)}>Log In</button></li>
             <li><button id="white-button" onClick={this.handleGuestLogin}>Guest LogIn</button></li>
           </ul>
-
-          <select >
-            <option value="/" selected="selected">Select</option>
-            <option>Join</option>
-            <option>Log In</option>
-            <option>Guest Login</option>
-          </select>
         </div>
       )
     }

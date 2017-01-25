@@ -21,7 +21,7 @@ class SignupForm extends React.Component {
   componentWillReceiveProps(newProps) {
     if (newProps.currentUser) {
       this.props.closeModal();
-      this.props.router.push('/dashboard')
+      this.props.router.push('/search')
     }
   }
 

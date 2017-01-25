@@ -28,7 +28,7 @@ class BookingForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="booking-modal">
         <header className="booking-header">
           <h1>Book this floor now!</h1>
         </header>

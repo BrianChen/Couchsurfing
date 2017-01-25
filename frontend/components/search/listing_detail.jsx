@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Modal from 'react-modal';
-import ModalStyle from '../Auth/review_modal_style';
+import BookingModalStyle from '../Auth/booking_modal_style';
 import BookingFormContainer from './booking_form_container';
 import ReviewShow from './review_show';
 
@@ -63,7 +63,7 @@ class ListingDetail extends React.Component {
         <Modal
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose}
-          style={ModalStyle}
+          style={BookingModalStyle}
           >
           <BookingFormContainer listing={this.props.listing} />
         </Modal>

@@ -1,4 +1,4 @@
-const ReviewModalStyle = {
+const BookingModalStyle = {
   overlay : {
     position        : 'fixed',
     top             : 0,
@@ -16,8 +16,8 @@ const ReviewModalStyle = {
     bottom          : '8%',
     border          : '1px solid #ccc',
     padding         : '20px',
-    minWidth        : '300px',
+    minWidth        : '450px',
   }
 };
 
-export default ReviewModalStyle;
+export default BookingModalStyle;

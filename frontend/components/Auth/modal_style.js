@@ -16,6 +16,7 @@ const ModalStyle = {
     bottom          : '8%',
     border          : '1px solid #ccc',
     padding         : '20px',
+    minWidth        : '300px',
   }
 };
 

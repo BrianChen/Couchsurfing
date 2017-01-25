@@ -43,8 +43,8 @@ class Root extends React.Component {
         <Router history={hashHistory}>
           <Route path="/" component={App}>
             <IndexRoute component={SplashContainer} onEnter={this.checkLogin}/>
-            <Route path="/dashboard" component={DashboardContainer} onEnter={this.getBookings}/>
             <Route path="/search" component={SearchContainer} onEnter={this.ensureLogin}/>
+            <Route path="/dashboard" component={DashboardContainer} onEnter={this.getBookings}/>
             <Route path="/listings/:listingId" component={ListingShowContainer} onEnter={this.ensureLogin} />
           </Route>
         </Router>
