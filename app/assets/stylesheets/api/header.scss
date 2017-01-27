@@ -1,4 +1,8 @@
 .header-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
   border-bottom: solid rgb(217, 217, 216);
   align-items: center;
   justify-content: space-between;
