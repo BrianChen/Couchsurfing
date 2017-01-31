@@ -1,6 +1,5 @@
 import React from 'react';
 import Modal from 'react-modal';
-import ReviewModalStyle from '../Auth/review_modal_style';
 import ReviewFormContainer from './review_form_container';
 
 class BookingItem extends React.Component {
@@ -41,9 +40,9 @@ class BookingItem extends React.Component {
             </div>
           </div>
           <Modal
+            className="reviewModal"
             isOpen={this.state.modalOpen}
             onRequestClose={this.onModalClose}
-            style={ReviewModalStyle}
             >
             <ReviewFormContainer booking={this.props.bookingItem} closeModal={this.onModalClose}/>
           </Modal>

@@ -2,6 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.reviewModal {
+  position: fixed;
+  padding: 20px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 370px;
+  height: 550px;
+  background-color: $white;
+  border: 1px solid #ccc;
+  border-radius: 4px;  
+}
+
 .review-header h1 {
   text-align: center;
   font-size: 25px;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Modal from 'react-modal';
-import BookingModalStyle from '../Auth/booking_modal_style';
 import BookingFormContainer from './booking_form_container';
 import ReviewShow from './review_show';
 

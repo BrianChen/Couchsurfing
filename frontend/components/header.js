@@ -2,7 +2,6 @@ import React from 'react';
 import Modal from 'react-modal';
 import SignUpFormContainer from './Auth/signup_form_container';
 import LoginFormContainer from './Auth/login_form_container';
-import ModalStyle from './Auth/modal_style';
 import { hashHistory, withRouter, Link } from 'react-router';
 import SearchBarContainer from './search/search_bar_container';
 
