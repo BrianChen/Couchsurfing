@@ -61,9 +61,9 @@ class ListingDetail extends React.Component {
           {reviewEls}
         </div>
         <Modal
+          className="bookingModal"
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose}
-          style={BookingModalStyle}
           >
           <BookingFormContainer listing={this.props.listing} />
         </Modal>

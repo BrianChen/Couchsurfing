@@ -1,16 +1,32 @@
 #booking-modal {
-  min-width: 400px;
+  position: fixed;
+  padding: 20px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 450px;
+  height: 550px;
+  background-color: $white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .booking-header {
   text-align: center;
   padding: 20px;
+  background-color: $lightgrey
+}
+
+.booking-content {
+  padding-top: 10px;
 }
 
 .booking-header h1 {
   font-size: 20px;
   font-weight: bold;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .booking-dates {
