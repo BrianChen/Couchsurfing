@@ -10,13 +10,12 @@ const ReviewModalStyle = {
   },
   content : {
     position        : 'fixed',
-    top             : '8%',
-    left            : '30%',
-    right           : '30%',
-    bottom          : '8%',
+    top             : '370px',
+    left            : '550px',
+    right           : '550px',
+    bottom          : '370px',
     border          : '1px solid #ccc',
     padding         : '20px',
-    minWidth        : '300px',
   }
 };
 

@@ -33,9 +33,9 @@ class Splash extends React.Component {
     let component = (this.state.signup) ? <SignUpFormContainer closeModal={this.onModalClose} handleClick={this.handleClick}/> : <LoginFormContainer closeModal={this.onModalClose} handleClick={this.handleClick}/>;
     return (
       <Modal
+        className="splashModal"
         isOpen={this.state.modalOpen}
         onRequestClose={this.onModalClose}
-        style={ModalStyle}
         >
         {component}
       </Modal>

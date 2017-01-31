@@ -89,9 +89,9 @@ class Header extends React.Component {
       <div className = "header-container">
         <Link to="/dashboard" className="logo">Floorsurfing</Link>
         <Modal
+          className="splashModal"
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose}
-          style={ModalStyle}
           >
           {component}
         </Modal>
