@@ -78,7 +78,7 @@ class Splash extends React.Component {
                 <p className="testimonial-subtitle">in New York, New York</p>
                 <div className="border"></div>
                 <p className="testimonial-text">
-                  When I was traveling solo around United States this summer, I used Floorsurfing to meet new people. Jenny was at the weekly Floorsurfing event in New York and I feel so lucky to have met him! I enjoyed our conversations about life, and she showed me the best shop to grab an authentic coffee. After just a few short days of hanging in the city, I felt as though I had known her for years.
+                  When I was traveling solo around United States this summer, I used Floorsurfing to meet new people. Jenny was at the weekly Floorsurfing event in New York and I feel so lucky to have met her! I enjoyed our conversations about life, and she showed me the best shop to grab an authentic coffee. After just a few short days of hanging in the city, I felt as though I had known her for years.
                 </p>
               </article>
             </div>
