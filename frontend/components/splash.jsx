@@ -59,7 +59,7 @@ class Splash extends React.Component {
           <section className="splash2">
             <div className="splash2-left">
               <h2>Explore the World</h2>
-              <button>How It Works</button>
+              <button className="blue-btn">How It Works</button>
             </div>
             <div className="splash2-right">
               <article>
@@ -81,6 +81,34 @@ class Splash extends React.Component {
                   When I was traveling solo around United States this summer, I used Floorsurfing to meet new people. Jenny was at the weekly Floorsurfing event in New York and I feel so lucky to have met her! I enjoyed our conversations about life, and she showed me the best shop to grab an authentic coffee. After just a few short days of hanging in the city, I felt as though I had known her for years.
                 </p>
               </article>
+            </div>
+          </section>
+
+          <section className="splash2">
+            <div className="splash2-right">
+              <article>
+                <h3>Stayed With</h3>
+                <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/v1485392793/airplane-11-32_kjgdtg.png"></img>
+                <div className="testimonial-images">
+                  <figure>
+                    <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/v1486421586/person3_p1pvu4.jpg"></img>
+                    <figcaption>Jeff</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/v1486421586/person4_kmpiuk.jpg"></img>
+                    <figcaption>Anna</figcaption>
+                  </figure>
+                </div>
+                <p className="testimonial-subtitle">in San Francisco, California</p>
+                <div className="border"></div>
+                <p className="testimonial-text">
+                  Anna is amazing! I loved spending time with her, and her openness and caring nature was so genuine and refreshing. When my suitcase didn't arrive until my second day, she was kind enough to loan me the comfiest pajamas to wear to sleep that first night, thank you again! A highlight of my trip includes celebrating her birthday with a dance party in the living room. Hope to see you again soon!
+                </p>
+              </article>
+            </div>
+            <div className="splash3-left">
+              <h2>Meet New People</h2>
+              <button className="orange-btn">Plan a Trip</button>
             </div>
           </section>
 

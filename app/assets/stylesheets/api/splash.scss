@@ -70,13 +70,31 @@
   min-width: 300px;
 }
 
+.splash3-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(http://res.cloudinary.com/dxfjyn0nq/image/upload/v1486422792/splash3_of5snu.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 65%;
+  min-width: 300px;
+}
+
+.splash3-left h2{
+  color: white;
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+
 .splash2-left h2 {
   color: white;
   font-size: 40px;
   padding-bottom: 10px;
 }
 
-.splash2-left button {
+.blue-btn {
   background-color: $blue;
   width: 140px;
   color: $white;
@@ -172,4 +190,11 @@ figure img {
 
 .ReactModal__Overlay {
   z-index: 1000;
+}
+
+.orange-btn {
+  background-color: $orange;
+  width: 140px;
+  border-color: #eb6542;
+  color: white;
 }
