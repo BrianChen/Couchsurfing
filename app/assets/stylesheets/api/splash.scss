@@ -51,6 +51,10 @@
   color: white;
 }
 
+.splash1-join-button:hover {
+  background-color: darken(#eb6542, 6%);
+}
+
 .splash2 {
   display: flex;
   margin: 60px 3% 60px 3%;
@@ -98,6 +102,10 @@
   background-color: $blue;
   width: 140px;
   color: $white;
+}
+
+.blue-btn:hover {
+  background-color: darken($blue, 6%);
 }
 
 .splash2-right {
@@ -208,4 +216,8 @@ figure img {
   width: 140px;
   border-color: #eb6542;
   color: white;
+}
+
+.orange-btn:hover {
+  background-color: darken($orange, 6%);
 }
