@@ -43,6 +43,8 @@
 .about-sidebar {
   display:flex;
   flex-direction: column;
+  border-right: 2px solid $greyBorder;
+  box-shadow: 3px 3px 3px #888888;
 }
 
 .about-sidebar li{
@@ -51,7 +53,6 @@
   width: 200px;
   height: 40px;
   border-bottom: 1px solid $greyBorder;
-  border-right: 2px solid $greyBorder;
   color: #08c;
   font-family: Verdana;
   padding-top: 12px;
@@ -63,7 +64,66 @@
 }
 
 .about-us {
-  padding: 20px;
+  padding: 40px;
   background-color: white;
   box-shadow: 3px 3px 3px #888888;
+}
+
+.about-us p {
+  display: block;
+  padding-top: 20px;
+  font-size: 15px;
+  font-family: Verdana;
+}
+
+.about-us p:first-child {
+  display: block;
+  padding: 30px;
+  font-size: 20px;
+  font-family: Verdana;
+  text-align: center;
+}
+
+.howitworks {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 3px 3px 3px #888888;
+}
+
+.howitworks h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+.howitworks h2 {
+  color: $orange;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  font-size: 20px;
+}
+
+.howitworks p {
+  font-size: 14px;
+}
+
+.safety {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 3px 3px 3px #888888;
+}
+
+.safety h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+.safety h2 {
+  color: $orange;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  font-size: 20px;
+}
+
+.safety p {
+  font-size: 14px;
 }

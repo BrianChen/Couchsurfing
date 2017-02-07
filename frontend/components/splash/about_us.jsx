@@ -9,9 +9,12 @@ class AboutUs extends React.Component {
   render() {
     return (
       <div className='about-us'>
-        <span>We envision a world made better by travel and travel made richer by connection. Couchsurfers share their lives with the people they encounter, fostering cultural exchange and mutual respect.</span>
-        <p>Floorsurfing is a parody inspired by couchsurfing, where you can find hosts and host guests for free. Timesurfing is coded by me, Matt Ehrlich, as a demonstration of my skills while I am looking for a developer job. The backend is coded using Ruby on Rails, with postgresql for the database. The frontend uses React and Redux as a javascript framework. The project couldn't be done without using google apis, particularly, google maps, google places, and google autocomplete.</p>
-        <p>If you are looking for a frontend or fullstack engineer who has experience with Ruby, Rails, Javascript, React, Redux, googleapis, HTML5, CSS3, and a little Node, Express, Angular, and MongoDB experience, please contact me. </p>
+        <p>Floorsurfing is a full stack web application inspired by Couchsurfing, where you can find hosts and host guests for free. It utilizes Ruby on Rails for the backend and React-Redux on the frontend.</p>
+        <p>
+          Floorsurfing was a project I started with the goal of learning more about React-Redux framework as well as gaining experience in connecting the backend and frontend together.  The backend validates the users and the booking constraints of listings using Ruby on Rails and postgresql as the database.  The frontend uses React and Redux as well as Google Maps API.
+        </p>
+        <p>Are you in need of a software engineer that have experience in working at both ends of the stack? Or perhaps you are looking for someone who is ethutastic about learning new technologies and grow with the company? Lets get in touch!
+        </p>
       </div>
     );
   }
