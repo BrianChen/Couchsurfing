@@ -25,9 +25,9 @@ class About extends React.Component {
         <div className="about-content">
           <div className="about-sidebar">
             <ul>
-              <li><Link to={'/about'}>About</Link></li>
-              <li><Link to={'/howitworks'}>How it works</Link></li>
-              <li><Link to={'/safety'}>Safety</Link></li>
+              <Link to={'/about'}><li>About</li></Link>
+              <Link to={'/howitworks'}><li>How it works</li></Link>
+              <Link to={'/safety'}><li>Safety</li></Link>
             </ul>
           </div>
           {this.props.children}

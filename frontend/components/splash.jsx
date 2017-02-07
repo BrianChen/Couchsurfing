@@ -61,7 +61,7 @@ class Splash extends React.Component {
           <section className="splash2">
             <div className="splash2-left">
               <h2>Explore the World</h2>
-              <button className="blue-btn">How It Works</button>
+              <button className="blue-btn"><Link to='/howitworks'>How It Works</Link></button>
             </div>
             <div className="splash2-right">
               <article>
@@ -110,7 +110,8 @@ class Splash extends React.Component {
             </div>
             <div className="splash3-left">
               <h2>Meet New People</h2>
-              <button className="orange-btn">Plan a Trip</button>
+              <button className="orange-btn" onClick={this.handleClick.bind(this, true)}>Plan a Trip</button>
+              {this.modal()}
             </div>
           </section>
 
