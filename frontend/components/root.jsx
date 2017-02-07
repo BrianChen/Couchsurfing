@@ -7,6 +7,10 @@ import App from './app';
 import { retrieveBookings } from '../actions/booking_actions';
 import SearchContainer from './search/search_container';
 import ListingShowContainer from './search/listing_show_container';
+import About from './splash/about';
+import AboutUs from './splash/about_us';
+import HowItWorks from './splash/howitworks';
+import Safety from './splash/safety';
 
 class Root extends React.Component {
 
@@ -43,6 +47,11 @@ class Root extends React.Component {
         <Router history={hashHistory}>
           <Route path="/" component={App}>
             <IndexRoute component={SplashContainer} onEnter={this.checkLogin}/>
+            <Route path="/about" component={About}>
+              <IndexRoute component={AboutUs}/>
+              <Route path='/howitworks' component={HowItWorks}/>
+              <Route path='/safety' component={Safety}/>
+            </Route>
             <Route path="/search" component={SearchContainer} onEnter={this.ensureLogin}/>
             <Route path="/dashboard" component={DashboardContainer} onEnter={this.getBookings}/>
             <Route path="/listings/:listingId" component={ListingShowContainer} onEnter={this.ensureLogin} />

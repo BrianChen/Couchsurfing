@@ -1,5 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { Link } from 'react-router';
+
 import SignUpFormContainer from './Auth/signup_form_container';
 import LoginFormContainer from './Auth/login_form_container';
 
@@ -114,9 +116,9 @@ class Splash extends React.Component {
 
           <section className="splash-footer">
             <ul>
-              <li>About</li>
-              <li>How It Works</li>
-              <li>Safety</li>
+              <li><Link to={'/about'}>About</Link></li>
+              <li><Link to={'/howitworks'}>How it Works</Link></li>
+              <li><Link to={'/safety'}>Safety</Link></li>
             </ul>
             <p>© 2017 Brian Chen</p>
           </section>

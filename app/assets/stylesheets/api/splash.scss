@@ -126,6 +126,16 @@
   padding: 0px 30px 0px 30px;
 }
 
+article h3 {
+  display: block;
+  font-size: 1.17em;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}
+
 figcaption {
   color: $greyFont;
   font-size: 20px;
@@ -151,6 +161,7 @@ figure img {
   display: flex;
   flex-direction: column;
   background-color: $white;
+  width: 100%;
 }
 
 .splash-footer ul {
