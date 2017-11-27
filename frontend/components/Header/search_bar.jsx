@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchContainer from './search_container';
+import SearchContainer from '../search/search_page_container';
 import { withRouter } from 'react-router';
 
 class SearchBar extends React.Component {

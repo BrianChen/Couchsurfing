@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Modal from 'react-modal';
-import BookingFormContainer from './booking_form_container';
-import ReviewShow from './review_show';
 
-// import ReviewShow from './review_show';
+import BookingFormContainer from '../Forms/booking_form_container';
+import ListingReview from './listing_review';
 
 class ListingDetail extends React.Component {
 
@@ -33,7 +32,7 @@ class ListingDetail extends React.Component {
     return (
       <div>
         {reviews.map(review => (
-          <ReviewShow rating={review.rating} comment={review.comment} key={review.id} />
+          <ListingReview rating={review.rating} comment={review.comment} key={review.id} />
         ))}
       </div>
     )

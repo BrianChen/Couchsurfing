@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderContainer from '../header_container';
+import HeaderContainer from '../Header/header_container';
 import UserBox from './user_box';
 import UserBoxContainer from './user_box_container';
 import Bookings from './bookings';

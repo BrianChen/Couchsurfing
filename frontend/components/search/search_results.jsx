@@ -1,12 +1,10 @@
 import React from 'react';
-import ListingIndexItem from './listing_index_item';
+import PropTypes from 'prop-types';
+
+import SearchItem from './search_item';
 import { Link, withRouter } from 'react-router';
 
-class ListingIndex extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
+class SearchResults extends React.Component {
 
   handleClick(city) {
     let geocoder = new google.maps.Geocoder();
@@ -43,7 +41,7 @@ class ListingIndex extends React.Component {
         <div className="listing-index">
           <h1>Listings </h1>
           {this.props.listings.map(listing => (
-            <ListingIndexItem listing={listing} key={listing.id} />
+            <SearchItem listing={listing} key={listing.id} />
           ))}
         </div>
       );
@@ -51,4 +49,9 @@ class ListingIndex extends React.Component {
   }
 }
 
-export default withRouter(ListingIndex);
+SearchResults.proptypes = {
+  updateFilter: PropTypes.func,
+  listings: PropTypes.array
+}
+
+export default withRouter(SearchResults);

@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import ListingShow from './listing_show';
+
+import ListingPage from './listing_page';
 import { retrieveListing } from '../../actions/listing_actions';
 import { selectListing } from '../../reducers/selectors';
 import { updateFilter } from '../../actions/filter_actions';
@@ -20,4 +21,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ListingShow)
+)(ListingPage)

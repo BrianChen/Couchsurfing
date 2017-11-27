@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderContainer from './header_container';
+import HeaderContainer from './Header/header_container';
 
 class App extends React.Component {
 
@@ -13,7 +13,7 @@ class App extends React.Component {
         <HeaderContainer />
         {this.props.children}
       </div>
-    )
+    );
   }
 }
 

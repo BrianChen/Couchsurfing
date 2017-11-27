@@ -2,9 +2,9 @@ import React from 'react';
 import Modal from 'react-modal';
 import { Link } from 'react-router';
 
-import SignUpFormContainer from './Auth/signup_form_container';
-import LoginFormContainer from './Auth/login_form_container';
-import Footer from './splash/footer';
+import SignUpFormContainer from '../Forms/signup_form_container';
+import LoginFormContainer from '../Forms/login_form_container';
+import Footer from '../Footer/footer';
 
 class Splash extends React.Component {
 

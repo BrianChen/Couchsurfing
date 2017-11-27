@@ -1,8 +1,9 @@
 import React from 'react';
-import MarkerManager from '../../util/marker_manager';
 import { withRouter } from 'react-router';
 
-class ListingMap extends React.Component {
+import MarkerManager from '../../util/marker_manager';
+
+class GoogleMap extends React.Component {
 
   constructor(props) {
     super(props);
@@ -60,15 +61,15 @@ class ListingMap extends React.Component {
         lat: e.latLng.lat(),
         lng: e.latLng.lng()
       };
-    })
+    });
   }
 
   render() {
     return (
       <div id='map-container' ref='map' className="map">
       </div>
-    )
+    );
   }
 }
 
-export default withRouter(ListingMap);
+export default withRouter(GoogleMap);

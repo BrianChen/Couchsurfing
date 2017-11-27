@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
+
 import ListingDetail from './listing_detail';
-import ListingMap from './listing_map';
+import ListingMap from '../map/google_map';
 // import ReviewButton from './review_button';
 
-class ListingShow extends React.Component {
+class ListingPage extends React.Component {
 
   constructor(props) {
     super(props)
@@ -34,4 +35,4 @@ class ListingShow extends React.Component {
   }
 };
 
-export default ListingShow;
+export default ListingPage;

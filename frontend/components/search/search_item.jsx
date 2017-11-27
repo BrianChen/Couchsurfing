@@ -1,10 +1,12 @@
 import React from 'react';
 import { withRouter, hashHistory } from 'react-router';
+import PropTypes from 'prop-types';
 
-class ListingIndexItem extends React.Component {
+class SearchItem extends React.Component {
 
   constructor(props) {
     super(props);
+
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -35,4 +37,8 @@ class ListingIndexItem extends React.Component {
   }
 }
 
-export default withRouter(ListingIndexItem);
+SearchItem.proptypes = {
+  listing: PropTypes.object
+}
+
+export default withRouter(SearchItem);

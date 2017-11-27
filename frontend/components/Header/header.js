@@ -1,9 +1,9 @@
 import React from 'react';
 import Modal from 'react-modal';
-import SignUpFormContainer from './Auth/signup_form_container';
-import LoginFormContainer from './Auth/login_form_container';
+import SignUpFormContainer from '../Forms/signup_form_container';
+import LoginFormContainer from '../Forms/login_form_container';
 import { hashHistory, withRouter, Link } from 'react-router';
-import SearchBarContainer from './search/search_bar_container';
+import SearchBarContainer from './search_bar_container';
 
 class Header extends React.Component {
 

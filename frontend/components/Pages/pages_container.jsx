@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Footer from '../Footer/footer';
 
-import Footer from './footer';
-
-class About extends React.Component {
+class PagesContainer extends React.Component {
 
   constructor(props) {
     super(props);
@@ -38,4 +37,4 @@ class About extends React.Component {
   }
 }
 
-export default About;
+export default PagesContainer;
