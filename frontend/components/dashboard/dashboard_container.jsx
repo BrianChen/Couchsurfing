@@ -9,11 +9,7 @@ const mapStateToProps = (store) => {
     guests: store.bookings.guests
 }};
 
-const mapDispatchToProps = () => ({
-  // retrieveBookings = () => dispatch(retrieveBookings())
-})
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(Dashboard)

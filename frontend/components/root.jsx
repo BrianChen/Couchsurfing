@@ -59,8 +59,8 @@ class Root extends React.Component {
           </Route>
         </Router>
       </Provider>
-    )
-  };
+    );
+  }
 };
 
 export default Root;

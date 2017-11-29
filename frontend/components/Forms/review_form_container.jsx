@@ -1,10 +1,7 @@
-import ReviewForm from './review_form';
 import { connect } from 'react-redux';
+
+import ReviewForm from './review_form';
 import { createReview } from '../../actions/review_actions';
-
-const mapStateToProps = state => ({
-
-})
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -12,6 +9,6 @@ const mapDispatchToProps = dispatch => {
   }}
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(ReviewForm)

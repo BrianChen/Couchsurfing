@@ -26,7 +26,12 @@
     content: "";
     clear:both;
   }
+}
 
+.travel-plans-content li:hover {
+  cursor: pointer;
+  background: $grey;
+}
   .contents {
     float: left;
   }
@@ -64,4 +69,3 @@
   #review-button {
     margin-top: 40px;
   }
-}
