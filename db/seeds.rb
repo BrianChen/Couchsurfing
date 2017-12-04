@@ -13,7 +13,7 @@ User.create!([{
     birthdate: "03-10-1988",
     gender: "M",
     interest: "A neutron walks into a bar and asks how much for a drink. The barman replies for you no charge",
-    profile: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1483515910/guest_ybqwf2.png"
+    profile: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512351582/guest_jz532z.png"
   }, {
     name: "Rickey Williams",
     email: "rickey@gmail.com",
@@ -49,7 +49,7 @@ User.create!([{
     birthdate: "05-12-1988",
     gender: "M",
     interest: "",
-    profile: 'http://res.cloudinary.com/dxfjyn0nq/image/upload/v1483515910/guest_ybqwf2.png'
+    profile: 'http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512351582/guest_jz532z.png'
   },{
     name: "Elon Musk",
     email: "elon@gmail.com",
@@ -160,7 +160,7 @@ Listing.create!([{
     max_guests: 2,
     start_date: "01-11-2016",
     end_date: "01-12-2016",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511994/floor15_e672he.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512352544/floor15_nyhhl2.jpg"
   }, {
     address: "958 Greenwich St",
     city: "San Francisco",
@@ -171,7 +171,7 @@ Listing.create!([{
     max_guests: 1,
     start_date: "01-12-2016",
     end_date: "01-12-2017",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481510592/floor2_bkbzky.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512352757/floor2_uddhr1.jpg"
   }, {
     address: "926 Howard Street",
     city: "San Francisco",
@@ -182,7 +182,7 @@ Listing.create!([{
     max_guests: 4,
     start_date: "01-12-2016",
     end_date: "01-06-2017",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511999/floor3_kkutl7.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512352850/floor3_xbkpkr.jpg"
   }, {
     address: "572 5th Avenue",
     city: "New York",
@@ -193,7 +193,7 @@ Listing.create!([{
     max_guests: 1,
     start_date: "01-11-2016",
     end_date: "09-06-2017",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481512006/floor4_higmbc.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512352943/floor4_orexza.jpg"
   }, {
     address: "2111 Mission St",
     city: "San Francisco",
@@ -204,7 +204,7 @@ Listing.create!([{
     max_guests: 2,
     start_date: "07-11-2016",
     end_date: "01-06-2019",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481510595/pexels-photo-172292_oqrda1.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512353080/floor5_oi5qgo.jpg"
   }, {
     address: "191 2nd st",
     city: "San Francisco",
@@ -215,7 +215,7 @@ Listing.create!([{
     max_guests: 3,
     start_date: "03-11-2016",
     end_date: "01-06-2018",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481512005/floor6_bokcpy.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512353183/floor6_qx7ff8.jpg"
   }, {
     address: "510 Steiner St",
     city: "San Francisco",
@@ -226,7 +226,7 @@ Listing.create!([{
     max_guests: 1,
     start_date: "03-11-2016",
     end_date: "10-06-2018",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511998/floor7_dkjatr.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512353279/floor7_uondol.jpg"
   }, {
     address: "1399 21st Ave",
     city: "San Francisco",
@@ -237,7 +237,7 @@ Listing.create!([{
     max_guests: 2,
     start_date: "07-01-2016",
     end_date: "10-12-2017",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511995/floor8_thbdjd.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512353353/floor8_kqzbse.jpg"
   }, {
     address: "492 5th Ave",
     city: "San Francisco",
@@ -248,7 +248,7 @@ Listing.create!([{
     max_guests: 3,
     start_date: "10-10-2016",
     end_date: "09-06-2017",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511994/floor9_cr2ct8.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512353416/floor9_b2nkgk.jpg"
   }, {
     address: "1715 20th St",
     city: "San Francisco",
@@ -259,7 +259,7 @@ Listing.create!([{
     max_guests: 1,
     start_date: "10-10-2016",
     end_date: "01-06-2018",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511995/floor10_lzbebo.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512353935/floor10_qisejc.jpg"
   }, {
     address: "1807 Broadway",
     city: "San Francisco",
@@ -270,7 +270,7 @@ Listing.create!([{
     max_guests: 3,
     start_date: "10-10-2016",
     end_date: "07-08-2018",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511994/floor11_srskgy.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512354002/floor11_pndwsj.jpg"
   }, {
     address: "28 E 28th St",
     city: "New York",
@@ -281,7 +281,7 @@ Listing.create!([{
     max_guests: 1,
     start_date: "12-12-2016",
     end_date: "12-12-2018",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511996/floor12_pldkmt.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512353867/floor18_ph6nvc.jpg"
   }, {
     address: "65 Leonard St",
     city: "New York",
@@ -292,7 +292,7 @@ Listing.create!([{
     max_guests: 2,
     start_date: "12-12-2016",
     end_date: "12-12-2018",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481510594/floor1_zfka6v.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512354148/floor1_bjf0zg.jpg"
   }, {
     address: "350 Grand St",
     city: "New York",
@@ -303,7 +303,7 @@ Listing.create!([{
     max_guests: 2,
     start_date: "12-12-2016",
     end_date: "12-12-2018",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481512007/floor14_rrqmgz.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512352381/floor14_qikv5w.jpg"
   }, {
     address: "338 E 20th St",
     city: "New York",
@@ -314,7 +314,7 @@ Listing.create!([{
     max_guests: 1,
     start_date: "12-12-2016",
     end_date: "09-09-2017",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511997/floor16_c0zb4u.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512354690/floor13_ukxkyk.jpg"
   }, {
     address: "50 Nathan Rd",
     city: "Hong Kong",
@@ -325,7 +325,7 @@ Listing.create!([{
     max_guests: 5,
     start_date: "12-12-2016",
     end_date: "09-09-2017",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511997/floor16_c0zb4u.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512354239/floor16_u0tjxq.jpg"
   }, {
     address: "28 Kimberley St",
     city: "Hong Kong",
@@ -336,7 +336,7 @@ Listing.create!([{
     max_guests: 3,
     start_date: "12-12-2016",
     end_date: "09-09-2017",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511994/floor17_kvoeoy.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512354373/floor17_e8pool.jpg"
   }, {
     address: "109-111 Glouceser Rd",
     city: "Hong Kong",
@@ -347,7 +347,7 @@ Listing.create!([{
     max_guests: 3,
     start_date: "12-12-2016",
     end_date: "09-09-2017",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511994/floor18_j026ym.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512354459/floor12_btm6sj.jpg"
   }, {
     address: "5 Connaught Rd Central",
     city: "Hong Kong",
@@ -358,7 +358,7 @@ Listing.create!([{
     max_guests: 2,
     start_date: "12-12-2016",
     end_date: "09-09-2017",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511993/floor19_rnpjrx.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512354524/floor19_ns8fdk.jpg"
   }, {
     address: "89 Queensway",
     city: "Hong Kong",
@@ -369,7 +369,7 @@ Listing.create!([{
     max_guests: 1,
     start_date: "12-12-2016",
     end_date: "09-09-2017",
-    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1481511993/floor20_i9jcmp.jpg"
+    picture: "http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512354598/floor20_mfg8fl.jpg"
   }]);
 
   Booking.create!([{

@@ -6,7 +6,7 @@ import SignUpFormContainer from '../Forms/signup_form_container';
 import LoginFormContainer from '../Forms/login_form_container';
 import Footer from '../Footer/footer';
 
-class Splash extends React.Component {
+class Home extends React.Component {
 
   constructor(props) {
     super(props);
@@ -67,14 +67,14 @@ class Splash extends React.Component {
             <div className="splash2-right">
               <article>
                 <h3>Connected With</h3>
-                <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/v1485392793/airplane-11-32_kjgdtg.png"></img>
+                <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512345059/airplane-icon_hamyue.png"></img>
                 <div className="testimonial-images">
                   <figure>
-                    <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/v1485393547/person1_ibiaim.jpg"></img>
+                    <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/r_0/v1512345282/person1_ph6btg.jpg"></img>
                     <figcaption>Alexa</figcaption>
                   </figure>
                   <figure>
-                    <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/v1485394632/person2_ywj6xi.png"></img>
+                    <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512345559/person2_jwwcs3.png"></img>
                     <figcaption>Jenny</figcaption>
                   </figure>
                 </div>
@@ -91,14 +91,14 @@ class Splash extends React.Component {
             <div className="splash2-right">
               <article>
                 <h3>Stayed With</h3>
-                <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/v1485392793/airplane-11-32_kjgdtg.png"></img>
+                <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512345059/airplane-icon_hamyue.png"></img>
                 <div className="testimonial-images">
                   <figure>
-                    <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/v1486421586/person3_p1pvu4.jpg"></img>
+                    <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512345806/person3_w0czpm.jpg"></img>
                     <figcaption>Jeff</figcaption>
                   </figure>
                   <figure>
-                    <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/v1486421586/person4_kmpiuk.jpg"></img>
+                    <img src="http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512346149/person4_eb7zgd.jpg"></img>
                     <figcaption>Anna</figcaption>
                   </figure>
                 </div>
@@ -123,4 +123,4 @@ class Splash extends React.Component {
 }
 
 
-export default Splash;
+export default Home;

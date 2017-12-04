@@ -57,4 +57,7 @@ Users can search for listings and by click on the particular listing, they will 
 
 ### Future Features
 
-Some of the future features that will be implemented are profile pages, pictures for each user and pictures for listings.  Direct messaging between users are also something to consider for future features.
+[] Profile pages/User Info page
+[] Messaging
+[] CSS redesign
+[] 
