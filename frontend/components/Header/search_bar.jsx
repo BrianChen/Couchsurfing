@@ -33,10 +33,10 @@ class SearchBar extends React.Component {
   render() {
     return (
       <form id="map-search" className="header-search-bar" autoComplete="off" onSubmit={this.handleSubmit}>
-        <input onChange={this.update('city')} type="text" id="search-input" name="search" value={this.state.city} placeholder="Where are you going?"></input>
-        <button className="search-btn" onClick={this.handleSubmit}/>
+          <input id="search-input" onChange={this.update('city')} type="text" name="search" value={this.state.city} placeholder="Where are you going?"></input>
+          <button className="search-btn" onClick={this.handleSubmit}/>
       </form>
-    )
+    );
   }
 }
 

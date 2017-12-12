@@ -36,6 +36,7 @@ class Home extends React.Component {
     return (
       <Modal
         className="splashModal"
+        contentLabel="splashModal"
         isOpen={this.state.modalOpen}
         onRequestClose={this.onModalClose}
         >

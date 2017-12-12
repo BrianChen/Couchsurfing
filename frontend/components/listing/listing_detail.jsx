@@ -60,6 +60,7 @@ class ListingDetail extends React.Component {
         </div>
         <Modal
           className="bookingModal"
+          contentLabel="bookingModal"
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose}
           >

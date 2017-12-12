@@ -53,6 +53,7 @@ class BookingItem extends React.Component {
           </div>
           <Modal
             className="reviewModal"
+            contentLabel="reviewModal"
             isOpen={this.state.modalOpen}
             onRequestClose={this.onModalClose}
             >
