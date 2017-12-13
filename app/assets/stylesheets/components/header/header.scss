@@ -5,11 +5,14 @@
   z-index: 500;
   border-bottom: solid rgb(217, 217, 216);
   align-items: center;
-  justify-content: space-between;
   display: flex;
   align-items: center;
   height: 60px;
   background-color: $white;
+}
+
+.nav-buttons {
+  margin-left: auto;
 }
 
 //logged in buttons
@@ -22,8 +25,13 @@
   font-weight: lighter;
   font-size: 30px;
   margin-left: 20px;
-  margin-right: 10px;
+  margin-right: 5px;
   color: $orange;
+}
+
+.dropdown-logo .fa {
+  padding-top: 10px;
+  margin-right: 12px;
 }
 
 .white-button {
@@ -69,41 +77,30 @@
   text-decoration: underline;
   color: $orange;
 }
-
-.dropdown-logo {
+.medium-screen {
   display: flex;
 }
-
-.nondropdown-logo {
+.large-screen {
   display: none;
 }
-@media screen and (min-width:760px) {
-  .logo {
-    margin-left: 40px;
-  }
-  .header-nav-button {
-    margin-right: 40px;
-  }
-  .login-button {
-    display:block;
-  }
-  .try-me-button {
-    width: 140px;
-  }
-  .white-button {
-    width: 100px;
-  }
-  .header-nav-button > button {
-    margin: 8px 12px;
-  }
-  .nondropdown-logo {
-    display: flex;
-  }
-  .dropdown-logo {
-    display: none; 
-  }
+.dropdown-menu {
+  position: absolute;
+  z-index: 1;
+  top: 62px;
+  background-color: $white;
+  width:90vw;
+  padding: 20px 5vw 20px 5vw;
 }
-
+.dropdown-menu ul {
+  width: 100%;
+}
+.dropdown-menu ul > li {
+  width: 100%;
+  height: 40px;
+}
+.hidden {
+  display:none;
+}
 
 //SearchBar
 .header-search-bar {
@@ -125,5 +122,41 @@
   border: none;
   padding-left: 9px;
   padding-right: 9px;
+  width: 50vw;
 }
 //end SearchBar
+
+@media screen and (min-width:760px) {
+  .logo {
+    margin-left: 40px;
+  }
+  .header-nav-button {
+    margin-right: 40px;
+  }
+  .login-button {
+    display:block;
+  }
+  .try-me-button {
+    width: 140px;
+  }
+  .white-button {
+    width: 100px;
+  }
+  .header-nav-button > button {
+    margin: 8px 12px;
+  }
+  .medium-screen {
+    display: none;
+  }
+  .large-screen {
+    display: flex;
+  }
+  .logo {
+    margin-right: 20px;
+  }
+
+  //SearchBar
+  #search-input {
+    width: 35vw;
+  }
+}

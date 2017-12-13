@@ -64,42 +64,47 @@ class Header extends React.Component {
   }
 
   getAuthHeader() {
-    //Need 2 logos here MEDIA QUERY
-    //One for mobile/small window that enabled Dropdown
-    //Two for large window that brings you back to dashboard
+    let menuClasses = "dropdown-menu medium-screen";
+    let iconClasses;
 
-    //The Dropdown check only applies to mobile/small window but is still there with
-    //display none for large window. We want to display the dropdown by adding a css className.
-    // let logo = this.state.showDropdown ?
-    let hidden = this.state.showDropdown ? "" : "hidden";
+    if (this.state.showDropdown) {
+      iconClasses = "fa fa-angle-up";
+    } else {
+      iconClasses = "fa fa-angle-down";
+      menuClasses += " hidden";
+    }
+
     return (
       <div>
         <div className="header-container">
           {/* This is for small window */}
-          <div className="dropdown-logo" onClick={this.toggleDropdown}>
+          <div className="medium-screen dropdown-logo" onClick={this.toggleDropdown}>
             <span className="logo">Floorsurfing</span>
-            <i className="fa fa-angle-down"></i>
+            <i className={iconClasses}></i>
           </div>
-
           {/* This is for large window */}
-          <div className="nondropdown-logo">
+          <div className="large-screen nondropdown-logo">
             <Link to="/dashboard" className="logo">Floorsurfing</Link>
           </div>
           <SearchBarContainer />
-          <div>
+          <div className="large-screen nav-buttons">
             <ul className="auth-header-nav">
               <Link to="/dashboard" className="nav-button">My Dashboard</Link>
+              <Link to="/about" className="nav-button">About</Link>
               <Link to="/" id="log-out-button" className="nav-button" onClick={this.props.logout}>Log Out</Link>
             </ul>
           </div>
         </div>
-        <div>
-
+        <div className={menuClasses}>
+          <ul>
+            <li><Link to="/dashboard" className="nav-button">My Dashboard</Link></li>
+            <li><Link to="/about" className="nav-button">About</Link></li>
+            <li><Link to="/howitworks" className="nav-button">How it works</Link></li>
+            <li><Link to="/safety" className="nav-button">Safety</Link></li>
+            <li><Link to="/" id="log-out-button" className="nav-button" onClick={this.props.logout}>Log Out</Link></li>
+          </ul>
         </div>
       </div>
-
-
-
     );
   }
 
@@ -116,7 +121,7 @@ class Header extends React.Component {
           >
           {modalForm}
         </Modal>
-        <div>
+        <div className="nav-buttons">
           <div className="header-nav-button">
             <button className="try-me-button" onClick={this.props.guestLogin}>Try Me!</button>
             <button className="white-button" onClick={this.handleClick.bind(this, true)}>Join</button>
