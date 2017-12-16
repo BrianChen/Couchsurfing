@@ -123,7 +123,7 @@ class Header extends React.Component {
         </Modal>
         <div className="nav-buttons">
           <div className="header-nav-button">
-            <button className="try-me-button" onClick={this.props.guestLogin}>Try Me!</button>
+            <button className="try-me-button" onClick={this.props.guestLogin}>Login as Guest</button>
             <button className="white-button" onClick={this.handleClick.bind(this, true)}>Join</button>
             <button className="login-button white-button" onClick={this.handleClick.bind(this, false)}>Log In</button>
           </div>

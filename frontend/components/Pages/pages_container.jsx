@@ -17,8 +17,8 @@ class PagesContainer extends React.Component {
       <div id="about">
         <div id="about-header">
           <div className="about-img">
-            <h3>Floorsurfing</h3>
-            <h1>Take a journey and discover</h1>
+            <h1>Floorsurfing</h1>
+            <h3>Take a journey and discover</h3>
           </div>
         </div>
         <div className="about-content">

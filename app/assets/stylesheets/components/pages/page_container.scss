@@ -6,13 +6,13 @@
   margin-top: 60px;
 }
 
+//Page Header
 #about-header {
   color: white;
   width: 100%;
   border: solid 2px $greyBorder;
 }
-
-.about-img {
+#about-header .about-img {
   background-image: url(http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512339668/about-us-logo_zizdqh.jpg);
   height: 350px;
   background-size: cover;
@@ -21,30 +21,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 250px;
 }
-
-.about-img > h3 {
+#about-header .about-img > h1 {
   font-family: "Brush Script MT", cursive;
-  font-size: 70px;
+  font-size: 58px;
 }
-
-.about-img h1 {
+#about-header .about-img > h3 {
   font-family: fantasy;
-  font-size: 40px;
+  font-size: 28px;
 }
+//end Page Header
+
 
 .about-content {
   display: flex;
-  width: 80%;
+  width: 100%;
   border: solid 2px $greyBorder;
   margin-bottom: 30px;
 }
 
 .about-sidebar {
-  display:flex;
-  flex-direction: column;
-  border-right: 2px solid $greyBorder;
-  box-shadow: 3px 3px 3px #888888;
+  display: none;
 }
 
 .about-sidebar li{
@@ -104,6 +102,7 @@
 
 .howitworks p {
   font-size: 14px;
+  line-height: 130%;
 }
 
 .safety {
@@ -129,9 +128,32 @@
 }
 
 @media screen and (min-width:760px) {
+  //Page Header
   #about-header {
     color: white;
     width: 80%;
     border: solid 2px $greyBorder;
+  }
+  #about-header .about-img {
+    height: 350px;
+  }
+  #about-header .about-img > h1 {
+    font-size: 70px;
+  }
+  #about-header .about-img > h3 {
+    font-size: 40px;
+  }
+  //end Page Header
+
+  .about-sidebar {
+    display: none;
+    display:flex;
+    flex-direction: column;
+    border-right: 2px solid $greyBorder;
+    box-shadow: 3px 3px 3px #888888;
+  }
+
+  .about-content {
+    width: 80%;
   }
 }

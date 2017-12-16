@@ -44,7 +44,7 @@ class LoginForm extends React.Component {
           </form>
           <div className="sign-up-footer">
             <p>Don't have an account? Use a guest account</p>
-            <button onClick={this.props.guestLogin}id="white-button">Guest Login</button>
+            <button onClick={this.props.guestLogin}id="white-button">Login as Guest</button>
           </div>
         </div>
       </div>

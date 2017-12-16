@@ -1,0 +1,96 @@
+#white-button {
+  background-color: #FFFFFF;
+  border: 2px solid #287fb8;
+  color: #287fb8;
+  padding: 10px;
+}
+
+#white-button:hover {
+  background-color: $grey
+}
+
+//Login and Signup Modal
+.splashModal {
+  position: fixed;
+  padding: 20px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 370px;
+  height: 550px;
+  background-color: $white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.ReactModal__Overlay {
+  z-index: 1000;
+}
+//end Modal
+
+//Login Form
+.login-header {
+  background-color: $lightgrey;
+  text-align: center;
+}
+.login-header > h1 {
+  color: #929ead;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.login-content {
+  padding-top: 18px;
+}
+.login-content input {
+  margin-bottom: 7px;
+}
+.login-form {
+  width: 100%;
+}
+#login-submit-button {
+  width: 100%;
+  color: $white;
+  margin-bottom: 39px;
+  background-color: $blue;
+}
+.login-footer {
+  text-align: center
+}
+.login-footer > p {
+  padding-bottom: 10px;
+}
+//end Login Form
+
+//Sign Up Form
+.sign-up-header {
+  background-color: $lightgrey;
+  text-align: center;
+}
+.sign-up-header > h1 {
+  color: #929ead;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.sign-up-content {
+  padding-top: 18px;
+}
+.sign-up-content input {
+  margin-bottom: 7px;
+}
+.sign-up-form {
+  width: 100%;
+}
+#sign-up-submit-button {
+  width: 100%;
+  color: $white;
+  margin-bottom: 39px;
+  background-color: $blue;
+}
+.sign-up-footer {
+  text-align: center
+}
+.sign-up-footer > p {
+  padding-bottom: 10px;
+}
+//end Sign Up Form
