@@ -1,0 +1,17 @@
+.dashboard-right {
+  width: 100%;
+  margin-top: 8px;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.dashboard-main {
+  display: flex;
+  margin-top: 60px;
+}
+
+@media screen and (min-width:961px) {
+  .dashboard-right {
+    width: 60%;
+  }
+}

@@ -1,0 +1,61 @@
+//Bookings Header
+.travel-plans-header {
+  border-bottom: 1px solid $greyBorder;
+  padding: 16px 20px;
+}
+.travel-plans-header h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+//end Bookings Header
+
+//Booking Item
+.booking-item-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: $white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 5px;
+  border-bottom: 2px solid $greyBorder;
+}
+.booking-item-div:hover {
+  cursor: pointer;
+  background: $grey;
+}
+.contents {
+  float: left;
+}
+.address {
+  font-weight: bold;
+}
+.city {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.booking-dates {
+  padding-top: 30px;
+}
+.booking-image {
+  max-width: 250px;
+  max-height: 200px;
+}
+.booking-picture {
+  min-width: 200px;
+  height:auto;
+}
+#review-button {
+  margin-top: 40px;
+  width: 110px;
+}
+//end Booking item
+
+@media screen and (min-width:630px) {
+  .booking-item-div {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

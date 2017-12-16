@@ -33,7 +33,7 @@
 }
 //end Page Header
 
-
+//Page Container Wrapper
 .about-content {
   display: flex;
   width: 100%;
@@ -41,10 +41,10 @@
   margin-bottom: 30px;
 }
 
+//About Sidebar
 .about-sidebar {
   display: none;
 }
-
 .about-sidebar li{
   text-align: center;
   vertical-align: middle;
@@ -55,25 +55,24 @@
   font-family: Verdana;
   padding-top: 12px;
 }
-
 .about-sidebar li:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+//end About Sidebar
 
+//About Us Content
 .about-us {
   padding: 40px;
   background-color: white;
   box-shadow: 3px 3px 3px #888888;
 }
-
 .about-us p {
   display: block;
   padding-top: 20px;
   font-size: 15px;
   font-family: Verdana;
 }
-
 .about-us p:first-child {
   display: block;
   padding: 30px;
@@ -81,51 +80,50 @@
   font-family: Verdana;
   text-align: center;
 }
+//end About Us Content
 
+//How It Works
 .howitworks {
   background-color: white;
   padding: 40px;
   box-shadow: 3px 3px 3px #888888;
 }
-
 .howitworks h1 {
   text-align: center;
   font-size: 32px;
 }
-
 .howitworks h2 {
   color: $orange;
   padding-bottom: 20px;
   padding-top: 30px;
   font-size: 20px;
 }
-
 .howitworks p {
   font-size: 14px;
   line-height: 130%;
 }
+//end How It Works
 
+//Safety
 .safety {
   background-color: white;
   padding: 40px;
   box-shadow: 3px 3px 3px #888888;
 }
-
 .safety h1 {
   text-align: center;
   font-size: 32px;
 }
-
 .safety h2 {
   color: $orange;
   padding-bottom: 20px;
   padding-top: 30px;
   font-size: 20px;
 }
-
 .safety p {
   font-size: 14px;
 }
+//end Safety
 
 @media screen and (min-width:760px) {
   //Page Header
@@ -152,7 +150,6 @@
     border-right: 2px solid $greyBorder;
     box-shadow: 3px 3px 3px #888888;
   }
-
   .about-content {
     width: 80%;
   }

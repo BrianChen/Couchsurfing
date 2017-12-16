@@ -25,7 +25,7 @@ const Bookings = ({bookings, isTravelPlans}) => {
 
 Bookings.proptypes = {
   bookings: PropTypes.array,
-  isTravelPlans: PropTypes.string
+  isTravelPlans: PropTypes.string,
 }
 
 export default Bookings;
