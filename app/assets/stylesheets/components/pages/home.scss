@@ -1,0 +1,280 @@
+//home page container
+.splash-main {
+  margin-top: 60px;
+  background-color: $whiteBackground;
+}
+
+//Buttons
+.orange-btn {
+  background-color: $orange;
+  width: 140px;
+  border-color: #eb6542;
+  color: white;
+}
+.orange-btn:hover {
+  background-color: darken($orange, 6%);
+}
+.blue-btn {
+  background-color: $blue;
+  width: 140px;
+  color: $white;
+}
+.blue-btn:hover {
+  background-color: darken($blue, 6%);
+}
+//end Buttons
+
+//Splash1
+.splash1-div {
+  max-width: 78.75em;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  align-self: center;
+}
+.splash1 {
+  display: flex;
+  justify-content: center;
+  background-image: url(http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512343057/splash1_hubefe.jpg);
+  background-position: center;
+  text-align: center;
+  background-size: cover;
+  min-height: 400px;
+  box-sizing: border-box;
+}
+.splash1-div h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.1;
+}
+.splash1-div h2 {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-top: 5px;
+  margin: 0 0 0.75em 0;
+}
+.splash1-join-button {
+  background-color: #eb6542;
+  border-color: #eb6542;
+  font-size: 17px;
+  min-width: 230px;
+  color: white;
+  height: 40px;
+}
+.splash1-join-button:hover {
+  background-color: darken(#eb6542, 6%);
+}
+//end Splash1
+
+//Splash-Article (used in Splash2 and Splash 3)
+.splash-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 35%;
+  background-color: $white;
+  min-width: 350px;
+  padding: 20px;
+}
+.testimonial-text {
+  display:inline-block;
+  min-width: 300px;
+  padding: 0px 30px 0px 30px;
+  line-height: 130%;
+}
+.splash-article h3 {
+  display: block;
+  font-size: 1.17em;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}
+figcaption {
+  color: $greyFont;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.border {
+  margin: 20px auto;
+  background-color: black;
+  width: 80px;
+  height: 2px;
+}
+figure img {
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  border: 4px solid $greyBorder;
+}
+.testimonial-images {
+  display: flex;
+  justify-content: space-around;
+}
+.testimonial-subtitle {
+  color: #929dad;
+  font-size: 14px;
+}
+//end Splash-Article
+
+//Splash2
+.splash2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512343546/explore-the-world_wymoci.jpg);
+  background-size: cover;
+  margin: 20px 0 20px 0;
+  padding-bottom: 20px;
+}
+.splash2-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150px;
+  justify-content: space-around;
+}
+.splash2-top h2 {
+  font-size: 30px;
+  color: white;
+}
+.splash2-left {
+  display: none;
+}
+//end Splash2
+
+//Splash3
+.splash3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512344591/meet-new-people_ep9b5d.jpg);
+  background-size: cover;
+  margin: 20px 0 20px 0;
+  padding-bottom: 20px;
+}
+.splash3-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150px;
+  justify-content: space-around;
+}
+.splash3-top h2 {
+  font-size: 30px;
+  color: white;
+}
+.splash3-left {
+  display: none;
+}
+.splash3-left h2 {
+  color: white;
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+//end Splash3
+
+.splashModal {
+  position: fixed;
+  padding: 20px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 370px;
+  height: 550px;
+  background-color: $white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.ReactModal__Overlay {
+  z-index: 1000;
+}
+
+//desktop
+@media screen and (min-width: 760px) {
+  //Splash1
+  .splash1 {
+    min-height: 570px;
+  }
+  .splash1-div h1 {
+    font-size: 45px;
+    font-weight: lighter;
+  }
+  .splash1-div h2 {
+    font-size: 23px;
+  }
+  //end Splash1
+
+  //Splash-Article (used in Splash2 and Splash3)
+  .splash-article {
+    height: 520px;
+  }
+  //end Splash-Article
+
+  //Splash2
+  .splash2 {
+    flex-direction: row;
+    background-image: none;
+    margin: 60px 3% 60px 3%;
+    max-height: 520px;
+    min-height: 520px;
+    padding-bottom: 0px;
+  }
+  .splash2-top {
+    display: none;
+  }
+  .splash2-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512343546/explore-the-world_wymoci.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 520px;
+    width: 65%;
+    min-width: 300px;
+  }
+  .splash2-left h2 {
+    color: white;
+    font-size: 40px;
+    padding-bottom: 10px;
+  }
+  //end Splash2
+
+  //Splash3
+  .splash3 {
+    flex-direction: row;
+    background-image: none;
+    margin: 60px 3% 60px 3%;
+    max-height: 520px;
+    min-height: 520px;
+    padding-bottom: 0px;
+  }
+  .splash3-top {
+    display: none;
+  }
+  .splash3-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(http://res.cloudinary.com/dxfjyn0nq/image/upload/v1512344591/meet-new-people_ep9b5d.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 65%;
+    min-width: 300px;
+    height: 520px;
+  }
+  //end Splash3
+}

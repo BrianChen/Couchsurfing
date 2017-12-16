@@ -16,9 +16,12 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import './variables.scss';
-@import './api/button.scss';
+@import './button.scss';
 
+//Components
 @import './components/header/header.scss';
+@import './components/pages/home.scss';
+@import './components/footer/footer.scss'
 
 // @import './api/header.scss';
 // @import './api/splash.scss';
