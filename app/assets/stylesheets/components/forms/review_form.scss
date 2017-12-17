@@ -1,0 +1,92 @@
+.reviewModal {
+  position: fixed;
+  padding: 20px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 370px;
+  height: 550px;
+  background-color: $white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.review-header h1 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-rating {
+  flex: 1;
+  padding: 10px;
+  width: auto;
+}
+
+.review-comment {
+  padding-top: 10px;
+  border: 1px solid $grey;
+}
+
+.rating-div {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.review-comment {
+  padding: 10px;
+}
+
+.rating {
+  overflow: hidden;
+  display: inline-block;
+  font-size: 0;
+  position: relative;
+}
+
+.rating-input {
+  float: right;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 0 0 0 -16px;
+  opacity: 0;
+}
+
+.rating:hover .rating-star:hover,
+.rating:hover .rating-star:hover ~ .rating-star {
+  background-position: 0 0;
+}
+
+.rating-input:checked ~ .rating-star {
+  background-position: 0 0;
+}
+
+.rating-star,
+.rating:hover .rating-star {
+  position: relative;
+  float: right;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url('http://kubyshkin.ru/samples/star-rating/star.png') 0 -16px;
+}
+
+#review-submit {
+  background-color: $orange;
+  padding: 5px;
+  border-radius: 5px;
+  color: $white;
+  float: right;
+  &:hover{
+    background-color: darken($orange, 20);
+  }
+}
