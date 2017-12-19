@@ -1,0 +1,83 @@
+.listing-detail-image {
+  width: 100%;
+}
+
+.listing-detail {
+  padding: 10px;
+}
+
+.listing-detail-content {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-detail-address,
+.listing-detail-city {
+  text-align: center;
+  font-weight: bold;
+}
+
+.description {
+  padding-top: 20px;
+}
+
+.max-guests {
+  padding-top: 10px;
+}
+
+.reviews {
+  font-weight: bold;
+  text-align: center;
+}
+
+.listing-title-book {
+  display: flex;
+  justify-content: space-around;
+}
+
+.booking-button {
+  background-color: $orange;
+  padding: 5px;
+  border-radius: 5px;
+  color: $white;
+  &:hover{
+    background-color: darken($orange, 20);
+  }
+}
+
+.listing-detail-reviews {
+  padding-top: 10px;
+}
+
+.reviews {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.review-show-rating {
+  padding-bottom: 10px;
+}
+
+.review-show {
+  padding-top:10px;
+  border-bottom: 2px solid $greyBorder;
+  padding-bottom: 10px;
+}
+
+.single-listing {
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 70px;
+}
+
+.left-half {
+  width: 40%;
+  min-width: 340px;
+  height: auto;
+}
+
+.single-listing-map {
+  width: 60%;
+}
