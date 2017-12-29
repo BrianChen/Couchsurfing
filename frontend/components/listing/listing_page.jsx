@@ -1,38 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router';
+import PropTypes from 'prop-types';
 
 import ListingDetail from './listing_detail';
 import ListingMap from '../map/google_map';
-// import ReviewButton from './review_button';
 
-class ListingPage extends React.Component {
-
-  constructor(props) {
-    super(props)
+const ListingPage = ({listingId, listing, retrieveListing}) => {
+  const listings = {
+    [listingId]: listing
   }
-
-  render() {
-    const listings = {
-      [this.props.listingId]: this.props.listing
-    }
-    const center = {lat: this.props.listing.latitude, lng: this.props.listing.longitude};
-    return (
-      <div className="single-listing">
-        <div className="left-half">
-          <ListingDetail listing={this.props.listing}/>
-        </div>
-        <div className="single-listing-map">
-          <ListingMap
-            center={center}
-            listings={listings}
-            listingId={this.props.listingId}
-            showListing={true}
-            retrieveListing={this.props.retrieveListing}
-            />
-        </div>
+  const center = {lat: listing.latitude, lng: listing.longitude};
+  return (
+    <div className="single-listing">
+      <div className="">
+        <ListingDetail listing={listing}/>
       </div>
-    )
-  }
-};
+      <div className="single-listing-map">
+        <ListingMap
+          center={center}
+          listings={listings}
+          listingId={listingId}
+          showListing={true}
+          retrieveListing={retrieveListing}
+          />
+      </div>
+    </div>
+  );
+}
+
+ListingPage.propTypes = {
+  listingId: PropTypes.number,
+  listing: PropTypes.object,
+  retrieveListing: PropTypes.func
+}
+
 
 export default ListingPage;
